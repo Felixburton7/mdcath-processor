@@ -124,17 +124,17 @@ def fix_pdb_with_pdbutils(input_pdb_path: str, output_pdb_path: str, config: Dic
 
         clean_config = config.get("pdb_cleaning", {})
 
-        # Fix ONLY the first CAY to N - more targeted approach
-        if clean_config.get("fix_first_cay", True):
-            atom_name_col = "ATOM_NAME" if "ATOM_NAME" in pdb_df.columns else "atom_name"
-            if atom_name_col in pdb_df.columns:
-                # Find the first CAY atom
-                cay_rows = pdb_df[pdb_df[atom_name_col] == "CAY"]
-                if not cay_rows.empty:
-                    first_cay_idx = cay_rows.index[0]
-                    # Change only the first CAY to N
-                    pdb_df.at[first_cay_idx, atom_name_col] = "N"
-                    logging.info("Changed first CAY atom to N")
+        # # Fix ONLY the first CAY to N - more targeted approach
+        # if clean_config.get("fix_first_cay", True):
+        #     atom_name_col = "ATOM_NAME" if "ATOM_NAME" in pdb_df.columns else "atom_name"
+        #     if atom_name_col in pdb_df.columns:
+        #         # Find the first CAY atom
+        #         cay_rows = pdb_df[pdb_df[atom_name_col] == "CAY"]
+        #         if not cay_rows.empty:
+        #             first_cay_idx = cay_rows.index[0]
+        #             # Change only the first CAY to N
+        #             pdb_df.at[first_cay_idx, atom_name_col] = "N"
+        #             logging.info("Changed first CAY atom to N")
 
         # Replace HSD/HSE/HSP with HIS
         if clean_config.get("correct_unusual_residue_names", True):
@@ -356,13 +356,16 @@ def extract_frames(coords: np.ndarray,
                    output_dir: str,
                    temperature: str,
                    replica: str,
-                   config: Dict[str, Any]) -> bool:
+                   config: Dict[str, Any],
+                   rmsd_data: Optional[np.ndarray] = None,
+                   gyration_data: Optional[np.ndarray] = None) -> bool:
     """
     Extract frames from coordinate data and save as PDB files.
     Uses the cleaned PDB as a template and updates only the coordinates.
+    Supports multiple frame selection methods: regular, random, gyration, and rmsd.
 
     Args:
-        coords: Coordinate data
+        coords: Coordinate data (can be single frame or multiple frames)
         resids: Residue IDs
         resnames: Residue names
         domain_id: Domain identifier
@@ -370,13 +373,21 @@ def extract_frames(coords: np.ndarray,
         temperature: Temperature
         replica: Replica index
         config: Configuration dictionary
+        rmsd_data: RMSD data for frame selection (if available)
+        gyration_data: Gyration radius data for frame selection (if available)
 
     Returns:
         Boolean indicating if extraction was successful
     """
+    import numpy as np
+    import os
+    from sklearn.cluster import KMeans
+    import random
+    
     frame_selection = config.get("processing", {}).get("frame_selection", {})
     method = frame_selection.get("method", "rmsd")
     num_frames = frame_selection.get("num_frames", 1)
+    cluster_method = frame_selection.get("cluster_method", "kmeans")
 
     try:
         # Create output directory for frames
@@ -396,34 +407,89 @@ def extract_frames(coords: np.ndarray,
         with open(pdb_path, 'r') as f:
             pdb_lines = f.readlines()
         
-        # For simplicity, extract only the last frame if num_frames == 1
-        if num_frames == 1:
-            frame_idx = -1
-            logging.debug(f"Coordinate shape for domain {domain_id}: {coords.shape}")
-
-            # Handle shape differences
-            if coords.ndim == 1:
-                logging.warning(f"Coordinates shape {coords.shape} - expected 2D array.")
-                if len(coords) == 3:  # Single XYZ
-                    frame_coords = np.array([coords])
-                else:
-                    logging.error(f"Cannot reshape coords with length {len(coords)}")
-                    return False
-            elif coords.ndim == 2:
-                # shape: (atoms, xyz)
-                frame_coords = coords
-            elif coords.ndim == 3:
-                # shape: (frames, atoms, xyz)
-                frame_coords = coords[frame_idx]
+        # Determine frame indices to extract
+        frame_indices = []
+        
+        # If coordinates are already a single frame (num_frames == 1 case)
+        if coords.ndim == 2:
+            logging.info(f"Processing single frame for domain {domain_id}")
+            frame_indices = [0]  # We already have the frame we want
+            # Reshape to make the processing logic consistent
+            coords = np.expand_dims(coords, axis=0)
+        else:
+            # Handle multi-frame selection (num_frames > 1)
+            total_frames = coords.shape[0]
+            logging.info(f"Selecting {num_frames} frames from {total_frames} available frames using {method} method")
+            
+            if num_frames >= total_frames:
+                # Use all frames if requested number exceeds available
+                frame_indices = list(range(total_frames))
+                logging.warning(f"Requested {num_frames} frames but only {total_frames} are available")
             else:
-                logging.error(f"Unsupported coordinate dims: {coords.ndim}")
-                return False
-
-            # Verify final shape is (atoms, 3)
-            if frame_coords.ndim != 2 or frame_coords.shape[1] != 3:
-                logging.error(f"Coordinates have invalid shape {frame_coords.shape}")
-                return False
-
+                if method == "regular":
+                    # Evenly spaced frames
+                    step = total_frames // num_frames
+                    frame_indices = [i * step for i in range(num_frames)]
+                
+                elif method == "random":
+                    # Random selection without replacement
+                    frame_indices = random.sample(range(total_frames), num_frames)
+                
+                elif method == "gyration":
+                    # Select frames based on gyration radius
+                    if gyration_data is None or len(gyration_data) != total_frames:
+                        logging.warning("Gyration data not available or invalid, falling back to regular sampling")
+                        step = total_frames // num_frames
+                        frame_indices = [i * step for i in range(num_frames)]
+                    else:
+                        # Select diverse frames by gyration radius
+                        sorted_indices = np.argsort(gyration_data)
+                        step = len(sorted_indices) // num_frames
+                        frame_indices = [sorted_indices[i * step] for i in range(num_frames)]
+                
+                elif method == "rmsd":
+                    # Selection based on RMSD clustering
+                    if rmsd_data is None or len(rmsd_data) != total_frames:
+                        logging.warning("RMSD data not available or invalid, falling back to regular sampling")
+                        step = total_frames // num_frames
+                        frame_indices = [i * step for i in range(num_frames)]
+                    else:
+                        # Use k-means clustering on RMSD values
+                        if cluster_method == "kmeans":
+                            # Reshape for k-means
+                            rmsd_reshaped = rmsd_data.reshape(-1, 1)
+                            
+                            # Apply k-means clustering
+                            kmeans = KMeans(n_clusters=num_frames, random_state=42, n_init=10)
+                            cluster_labels = kmeans.fit_predict(rmsd_reshaped)
+                            
+                            # Select the frame closest to each cluster center
+                            frame_indices = []
+                            for i in range(num_frames):
+                                cluster_points = np.where(cluster_labels == i)[0]
+                                if len(cluster_points) > 0:
+                                    # Get the point closest to the cluster center
+                                    cluster_center = kmeans.cluster_centers_[i]
+                                    distances = np.abs(rmsd_reshaped[cluster_points] - cluster_center)
+                                    closest_idx = cluster_points[np.argmin(distances)]
+                                    frame_indices.append(closest_idx)
+                        else:
+                            logging.warning(f"Unsupported cluster method: {cluster_method}, using regular sampling")
+                            step = total_frames // num_frames
+                            frame_indices = [i * step for i in range(num_frames)]
+                else:
+                    logging.warning(f"Unsupported frame selection method: {method}, using regular sampling")
+                    step = total_frames // num_frames
+                    frame_indices = [i * step for i in range(num_frames)]
+        
+        logging.info(f"Selected frame indices: {frame_indices}")
+        
+        # Process each selected frame
+        success_count = 0
+        
+        for frame_idx in frame_indices:
+            frame_coords = coords[frame_idx]
+            
             # Create a mapping from resid to coordinates index
             resid_to_coord = {}
             for i, resid in enumerate(resids):
@@ -494,20 +560,21 @@ def extract_frames(coords: np.ndarray,
             
             # Check if we've used all coordinates
             coords_used = len(atom_coord_mapping)
-            logging.info(f"Used {coords_used}/{len(frame_coords)} coordinates for {domain_id}")
+            logging.info(f"Used {coords_used}/{len(frame_coords)} coordinates for frame {frame_idx}")
             
-            # Write out the single-frame PDB
-            frame_path = os.path.join(frame_dir, f"{domain_id}_frame.pdb")
+            # Write out the frame PDB
+            if num_frames == 1:
+                frame_path = os.path.join(frame_dir, f"{domain_id}_frame.pdb")
+            else:
+                frame_path = os.path.join(frame_dir, f"{domain_id}_frame_{frame_idx}.pdb")
+                
             with open(frame_path, 'w') as f:
                 f.writelines(new_pdb_lines)
-
-            logging.info(f"Extracted 1-frame PDB for domain {domain_id} at T={temperature}, rep={replica}")
-            return True
-
-        else:
-            # Not implemented
-            logging.warning(f"Multiple-frame extraction not implemented; requested {num_frames}.")
-            return False
+            
+            success_count += 1
+            logging.info(f"Extracted frame {frame_idx} for domain {domain_id} at T={temperature}, rep={replica}")
+        
+        return success_count > 0
 
     except Exception as e:
         logging.error(f"Failed to extract frames for domain {domain_id}: {e}")
@@ -518,6 +585,7 @@ def extract_frames(coords: np.ndarray,
 def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str, Any]) -> Dict[str, Any]:
     """
     Process PDB data for all domains: save cleaned PDB, optionally extract frames, etc.
+    Updated to handle the enhanced frame selection.
 
     Args:
         domain_results: Dictionary with processing results for all domains
@@ -566,8 +634,9 @@ def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str
     # Extract frames from HDF5 trajectories
     temps = [str(t) for t in config.get("temperatures", [320, 348, 379, 413, 450])]
     num_replicas = config.get("num_replicas", 5)
+    num_frames = config.get("processing", {}).get("frame_selection", {}).get("num_frames", 1)
 
-    logging.info("Extracting frames from trajectories...")
+    logging.info(f"Extracting {num_frames} frames from trajectories...")
     for domain_id, result in tqdm(results.items(), desc="Extracting frames"):
         if not result.get("pdb_saved", False):
             continue
@@ -583,12 +652,18 @@ def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str
         for temp in temps:
             for r in range(num_replicas):
                 replica = str(r)
-                coords_result = loader.extract_coordinates(temp, replica)
+                
+                # Extract coordinates with RMSD and gyration data
+                # Use special value -999 to request all frames if we need multiple
+                frame_param = -999 if num_frames > 1 else -1
+                coords_result = loader.extract_coordinates(temp, replica, frame=frame_param)
+                
                 if coords_result is not None:
-                    coords, resids, resnames = coords_result
+                    coords, resids, resnames, rmsd_data, gyration_data = coords_result
                     extract_success = extract_frames(
                         coords, resids, resnames,
-                        domain_id, output_dir, temp, replica, config
+                        domain_id, output_dir, temp, replica, config,
+                        rmsd_data, gyration_data
                     )
                     if extract_success:
                         if "frames" not in results[domain_id]:
