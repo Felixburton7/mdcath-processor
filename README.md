@@ -146,7 +146,6 @@ graph TD
     Clean --> Classify[Core/Exterior Classification]
     Clean --> Frames[Frame Extraction]
     Clean --> DSSP[DSSP Processing]
-    Clean --> COORD[Coordinate Processing]
 
     %% RMSF pipeline
     RMSF --> Replica[RMSF Analysis]
@@ -154,7 +153,7 @@ graph TD
     TempAvg --> ML[ML‑Ready Dataset]
 
     %% Coordinate pipeline
-    COORD --> Vox[Voxelization]
+    Clean --> Vox[Voxelization]
     Vox --> ML
 
     %% Feature generation
