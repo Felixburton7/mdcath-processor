@@ -170,11 +170,11 @@ graph TD
     A[mdCATH H5 Files] --> B[Data Extraction]
     B --> C1[PDB Data]
     B --> C2[RMSF Data]
-    B --> C4[Coordinate Data]
     
     C1 --> D1[PDB Processing]
     D1 --> E1[Cleaned PDB Files]
     E1 --> F1[Core/Exterior Classification]
+    E1 --> C4[Coordinate Data]
     E1 --> D3[DSSP Processing]
     
     C2 --> D2[RMSF Analysis]
