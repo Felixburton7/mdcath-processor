@@ -139,33 +139,28 @@ graph TD
 
     B --> PDB[PDB Processing]
     B --> RMSF[RMSF Processing]
-    B --> DSSP[DSSP Processing]
     B --> COORD[Coordinate Processing]
 
     %% PDB pipeline
     PDB --> Clean[PDB Cleaning]
     Clean --> Classify[Core/Exterior Classification]
     Clean --> Frames[Frame Extraction]
+    Clean --> DSSP[DSSP Processing]
 
     %% RMSF pipeline
     RMSF --> Replica[RMSF Analysis]
     Replica --> TempAvg[Temperature‑averaged RMSF]
-
-    %% DSSP pipeline
-    DSSP --> DSSPFeat[DSSP Feature Extraction]
+    TempAvg --> ML[ML‑Ready Dataset]
 
     %% Coordinate pipeline
     COORD --> Vox[Voxelization]
+    Vox --> ML
 
     %% Feature generation
     Classify --> Features[Feature Generation]
     Frames --> Features
-    TempAvg --> Features
-    DSSPFeat --> Features
-
-    %% Convergence
-    Features --> ML[ML‑Ready Dataset]
-    Vox --> ML
+    DSSP --> Features
+    Features --> ML
 
     %% Optional downstream
     ML --> Viz[Visualizations]
