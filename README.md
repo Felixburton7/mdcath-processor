@@ -144,13 +144,14 @@ graph TD
     C1 --> D1[PDB Processing]
     D1 --> E1[Cleaned PDB Files]
     E1 --> F1[Core/Exterior Classification]
+    E1 --> D3[DSSP Processing]
     E1 --> F2[Frame Extraction]
     
     C2 --> D2[RMSF Analysis]
     D2 --> E2[Replica-level RMSF]
     E2 --> F3[Temperature-averaged RMSF]
     
-    C3 --> D3[DSSP Processing]
+    
     C4 --> D4[Coordinate Processing]
     
     F1 --> G[Feature Generation]
