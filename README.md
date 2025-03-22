@@ -158,7 +158,6 @@ graph TD
     %% Feature generation (center)
     Classify --> Features[Feature Generation]
     DSSP --> Features
-    Frames --> Features
     Features --> ML
 
     %% Downstream
