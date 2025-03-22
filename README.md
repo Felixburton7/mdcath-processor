@@ -5,12 +5,6 @@
 [![BioMolecular Analysis](https://img.shields.io/badge/Biomolecular-Analysis-green.svg)](https://github.com/Felixburton7/mdcath-processor)
 [![Protein Dynamics](https://img.shields.io/badge/Protein-Dynamics-red.svg)](https://github.com/Felixburton7/mdcath-processor)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/🔬%20Protein-Dynamics-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/🧠%20Machine-Learning-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/🔄%20Molecular-Simulations-teal?style=for-the-badge" />
-</p>
-
 A comprehensive suite for processing mdCATH protein dynamics dataset to facilitate machine learning-based prediction of Root Mean Square Fluctuation (RMSF) from protein structures.
 
 ---
@@ -59,87 +53,37 @@ By providing a consistent framework for data preparation, this project enables r
 
 ## 🧬 About mdCATH Dataset
 
-<div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; border-left: 5px solid #007bff; margin: 20px 0;">
-<h3 style="margin-top: 0;">📚 mdCATH: A Large-Scale MD Dataset</h3>
+The mdCATH dataset is a comprehensive collection of molecular dynamics simulations designed for data-driven computational biophysics research. Created by Antonio Mirarchi, Toni Giorgino, and Gianni De Fabritiis, this dataset provides:
 
-<p>The mdCATH dataset is a comprehensive collection of molecular dynamics simulations designed for data-driven computational biophysics research. Created by Antonio Mirarchi, Toni Giorgino, and Gianni De Fabritiis, this dataset provides:</p>
+- 🧪 Multiple temperature simulations (320K-450K)
+- 🔄 Multiple replicas per temperature
+- ⏱️ Extensive trajectory data for protein domains from the CATH database
+- 📊 Rich structural and dynamics information including coordinates, RMSF, and DSSP data
 
-<ul>
-  <li>🧪 Multiple temperature simulations (320K-450K)</li>
-  <li>🔄 Multiple replicas per temperature</li>
-  <li>⏱️ Extensive trajectory data for protein domains from the CATH database</li>
-  <li>📊 Rich structural and dynamics information including coordinates, RMSF, and DSSP data</li>
-</ul>
+The original dataset is available on [Hugging Face](https://huggingface.co/datasets/compsciencelab/mdCATH) and can be visualized on [PlayMolecule](https://open.playmolecule.org/mdcath).
 
-<p>The original dataset is available on <a href="https://huggingface.co/datasets/compsciencelab/mdCATH">Hugging Face</a> and can be visualized on <a href="https://open.playmolecule.org/mdcath">PlayMolecule</a>.</p>
-
-<p><i>Citation: Mirarchi, A., Giorgino, T., & De Fabritiis, G. (2024). mdCATH: A Large-Scale MD Dataset for Data-Driven Computational Biophysics. <a href="https://arxiv.org/abs/2407.14794">arXiv:2407.14794</a></i></p>
-</div>
+*Citation: Mirarchi, A., Giorgino, T., & De Fabritiis, G. (2024). mdCATH: A Large-Scale MD Dataset for Data-Driven Computational Biophysics. [arXiv:2407.14794](https://arxiv.org/abs/2407.14794)*
 
 ## 🔬 Key Features
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; margin-bottom: 30px;">
-<div style="background-color: rgba(240, 248, 255, 0.6); padding: 15px; border-radius: 8px;">
-  <h3>📊 Data Processing</h3>
-  <ul>
-    <li>📈 <b>Comprehensive Data Extraction</b>: Extract RMSF, DSSP, and coordinate data from H5 files</li>
-    <li>🧹 <b>Sophisticated PDB Processing</b>: Clean and standardize PDB files</li>
-    <li>🌡️ <b>Multi-temperature Analysis</b>: Process data across temperatures (320K-450K)</li>
-    <li>🔄 <b>Multi-replica Support</b>: Handle multiple simulation replicas</li>
-  </ul>
-</div>
-
-<div style="background-color: rgba(255, 248, 240, 0.6); padding: 15px; border-radius: 8px;">
-  <h3>🧠 ML & Analysis Features</h3>
-  <ul>
-    <li>🧮 <b>ML-Ready Feature Generation</b>: Create optimized feature sets</li>
-    <li>🎯 <b>Core/Exterior Classification</b>: Classify protein residues using solvent accessibility</li>
-    <li>📊 <b>Insightful Visualizations</b>: Generate publication-quality plots</li>
-    <li>🧩 <b>3D Voxelization</b>: Convert proteins to 3D grids for deep learning</li>
-  </ul>
-</div>
-</div>
+- **Comprehensive Data Extraction**: Extract RMSF, DSSP, and coordinate data from mdCATH H5 files
+- **Sophisticated PDB Processing**: Clean and standardize PDB files for downstream analysis
+- **Multi-temperature Analysis**: Process data across multiple temperatures (320K-450K) and replicas
+- **Core/Exterior Classification**: Classify protein residues as core or exterior using DSSP-based solvent accessibility
+- **ML-Ready Feature Generation**: Create feature sets optimized for machine learning applications
+- **Insightful Visualizations**: Generate publication-quality visualizations of RMSF distributions and correlations
+- **Voxelized Representation**: Convert protein structures to voxelized format for 3D deep learning
+- **Frame Selection**: Extract representative frames from trajectories using RMSD or gyration radius clustering
 
 ## ⚙️ Installation
 
 ### Prerequisites
 
-<table>
-<thead>
-  <tr>
-    <th>Requirement</th>
-    <th>Purpose</th>
-    <th>Installation</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Python 3.9+</td>
-    <td>Base environment</td>
-    <td><a href="https://www.python.org/downloads/">python.org</a></td>
-  </tr>
-  <tr>
-    <td>H5py</td>
-    <td>HDF5 file handling</td>
-    <td><code>pip install h5py</code></td>
-  </tr>
-  <tr>
-    <td>Biopython</td>
-    <td>PDB handling & DSSP</td>
-    <td><code>pip install biopython</code></td>
-  </tr>
-  <tr>
-    <td>aposteriori</td>
-    <td>Voxelization (optional)</td>
-    <td><code>pip install aposteriori</code></td>
-  </tr>
-  <tr>
-    <td>pdbUtils</td>
-    <td>Enhanced PDB processing</td>
-    <td><code>pip install pdbUtils</code></td>
-  </tr>
-</tbody>
-</table>
+- Python 3.9+
+- H5py for handling HDF5 files
+- Biopython for PDB handling and DSSP calculations
+- aposteriori (optional, for voxelization)
+- pdbUtils (recommended, for enhanced PDB processing)
 
 ### Setup
 
@@ -221,161 +165,180 @@ vis_results = visualization.generate_visualizations(rmsf_results, ml_results, do
 
 The mdCATH processor transforms raw H5 data through a sophisticated pipeline of processing steps:
 
-<div align="center" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <img src="https://mermaid.ink/img/pako:eNqFksFuwjAMhl_F8mlI0MLYhgaHHSZNmrRJO1S9mMRQi6ZOlYQJId59aQutNm0bl8T-f_v3r2SAkmMGAZztjHbf2u6MHGFaFtZpA8El6BjWSpVEpLxZJg-ztODxYZ4OEEilc6TM62pGt7ZbPZHrvGu_WZOb9mlh1J5srb9pNcnrDmEwi6LoYjQjQ-56hKENNm8LhMGDxbgSxk0Moe95nuc3GJW6n-hFv8XQMmXKyGKoE_RxNkKYGbsxWBRcmgphE0MzYaPEw9n2f6m8wCUKSJmwGZIgONZ2oaQ07zx4QKuXymWmIxTvEApIl5JhwG9yITnPvTU-8P4y73XwC_hhzT4L6KxVgoBJXZb9-FweM19g7Uh0MIBu-byfBrngJQSiUUq2qEy6KOvLw-lGFcxX1oUA-2L3-IbQ8e0VZ71Y-R6TQoAjnrdbxu95Ng?type=png" alt="Data Processing Pipeline" width="700">
-</div>
+```mermaid
+graph TD
+    A[mdCATH H5 Files] --> B[Data Extraction]
+    B --> C1[PDB Data]
+    B --> C2[RMSF Data]
+    B --> C3[DSSP Data]
+    B --> C4[Coordinate Data]
+    
+    C1 --> D1[PDB Processing]
+    D1 --> E1[Cleaned PDB Files]
+    E1 --> F1[Core/Exterior Classification]
+    E1 --> F2[Frame Extraction]
+    
+    C2 --> D2[RMSF Analysis]
+    D2 --> E2[Replica-level RMSF]
+    E2 --> F3[Temperature-averaged RMSF]
+    
+    C3 --> D3[DSSP Processing]
+    C4 --> D4[Coordinate Processing]
+    D4 --> F2
+    
+    F1 --> G[Feature Generation]
+    F2 --> H[Voxelization]
+    F3 --> G
+    D3 --> G
+    
+    G --> I[ML-Ready Datasets]
+    H --> J[Voxelized Representations]
+    
+    I --> K[Visualizations]
+```
 
 ### Detailed Process Flow:
 
 1. **Data Extraction** 🔍
-   - Raw H5 files are parsed to extract multiple data types:
-     - PDB structures for structural analysis
-     - RMSF values for flexibility quantification
-     - DSSP annotations for secondary structure
-     - Atomic coordinates for 3D analysis
+   - Raw H5 files are parsed to extract PDB structures, RMSF values, DSSP annotations, and atomic coordinates
+   - Data is organized by temperature and replica using the `H5DataLoader` class
 
 2. **PDB Processing** 🧹
-   - PDB files are cleaned and standardized
-   - Atom numbering is fixed
-   - Unusual residue names are corrected
-   - CRYST1 records are added for compatibility
+   - PDB files are cleaned and standardized with `fix_pdb` functions
+   - Atom numbering is fixed, and unusual residue names are corrected
+   - CRYST1 records are added for compatibility with analysis tools
 
-3. **Coordinate Processing** 📍
-   - Extract trajectories from the H5 files
-   - Calculate RMSD and gyration radius metrics
-   - Prepare coordinates for frame selection
+3. **RMSF Analysis** 📈
+   - RMSF data is calculated for each residue across different replicas
+   - Temperature-specific and temperature-averaged RMSF profiles are generated
 
-4. **RMSF Analysis** 📈
-   - Calculate per-residue RMSF values
-   - Average across replicas and temperatures
-   - Generate comprehensive flexibility profiles
+4. **Structure Classification** 🧩
+   - Residues are classified as core or exterior based on solvent accessibility
+   - DSSP-based relative accessibility is used for this classification
 
-5. **Structure Classification** 🧩
-   - Classify residues as core or exterior
-   - Analyze secondary structure with DSSP
-   - Measure solvent accessibility
+5. **Frame Selection** 🖼️
+   - Representative frames are selected from trajectories using RMSD clustering, gyration radius filtering, or regular sampling
+   - Frames are extracted as PDB files for visualization and further analysis
 
-6. **Frame Selection** 🖼️
-   - Extract representative frames using various methods:
-     - RMSD clustering for diverse conformations
-     - Gyration radius for size-based selection
-     - Regular sampling for uniform coverage
+6. **Feature Generation** 🧮
+   - Features are created by combining RMSF, structural, and sequence information
+   - Data is normalized and encoded for machine learning applications
+   - Secondary structure assignment and relative accessibility are included
 
-7. **Feature Generation** 🧮
-   - Combine RMSF, structural, and sequence information
-   - Create ML-ready feature datasets
-   - Normalize and encode features
-
-8. **Visualization** 📊
-   - Generate publication-quality plots
-   - Visualize flexibility patterns
-   - Create correlation analyses
-
-9. **Voxelization** 🧊
-   - Convert proteins to 3D voxel grids
-   - Prepare data for 3D deep learning
-   - Encode atom types in separate channels
+7. **Visualization & Output** 📊
+   - Multiple visualizations are generated to provide insights into the data
+   - All processed data is saved in structured formats for downstream use
 
 ## 🛠️ Configuration Options
 
-The processing pipeline is highly configurable via a YAML configuration file. Here are the key configuration sections:
+The processing pipeline is highly configurable via a YAML configuration file. Here's a detailed breakdown of the key parameters:
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; margin-bottom: 30px;">
-
-<!-- Input/Output Configuration -->
-<div style="background-color: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3498db;">
-<h3>📥 Input/Output Configuration</h3>
+### Input/Output Configuration
 
 ```yaml
 input:
-  mdcath_folder: "/mnt/datasets/MD_CATH/data"  # H5 files path
-  domain_ids: [                           # Domains to process
+  mdcath_folder: "/mnt/datasets/MD_CATH/data"  # Path to raw H5 files
+  domain_ids: [                                # Domains to process (empty [] for all)
     "12asA00",
     "153lA00",
     "16pkA02",
-    # More domains...
+    # More domains can be added here
   ]
 
-temperatures: [320, 348, 379, 413, 450]  # Temps to process
-num_replicas: 5                          # Replicas per temp
+temperatures: [320, 348, 379, 413, 450]  # Temperatures to process
+num_replicas: 5                          # Number of replicas per temperature
 
 output:
-  base_dir: "./outputs"                  # Output directory
+  base_dir: "./outputs"                  # Base directory for all outputs
 ```
-</div>
 
-<!-- Processing Parameters -->
-<div style="background-color: #f0fff7; padding: 15px; border-radius: 8px; border-left: 5px solid #2ecc71;">
-<h3>⚙️ Processing Parameters</h3>
+### Processing Parameters
+
+#### Frame Selection Options
 
 ```yaml
 processing:
   frame_selection:
-    method: "rmsd"        # regular/rmsd/gyration/random
-    num_frames: 4         # Frames per domain/temperature
+    method: "rmsd"        # Options: regular, rmsd, gyration, random
+    num_frames: 4         # Number of frames to extract per domain/temperature
     cluster_method: "kmeans"  # For RMSD-based selection
-
-  pdb_cleaning:
-    replace_chain_0_with_A: true    # Replace chain '0' with 'A'
-    fix_atom_numbering: true        # Fix atom numbering
-    correct_unusual_residue_names: true  # Convert non-standard names
-    add_cryst1_record: true         # Add CRYST1 record
-    remove_hydrogens: false         # Remove H atoms
-    remove_solvent_ions: true       # Remove water/ions
-    stop_after_ter: true            # Stop at TER record
 ```
-</div>
 
-<!-- ML Feature Extraction -->
-<div style="background-color: #fff7f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e67e22;">
-<h3>🧠 ML Feature Extraction</h3>
+#### PDB Cleaning Options
+
+```yaml
+processing:
+  pdb_cleaning:
+    replace_chain_0_with_A: true         # Replace chain '0' with 'A'
+    fix_atom_numbering: true             # Fix inconsistent atom numbering
+    correct_unusual_residue_names: true  # Convert non-standard residue names
+    add_cryst1_record: true              # Add CRYST1 record for compatibility
+    remove_hydrogens: false              # Remove hydrogen atoms
+    remove_solvent_ions: true            # Remove water and ion molecules
+    stop_after_ter: true                 # Stop processing after TER record
+```
+
+#### ML Feature Extraction
 
 ```yaml
 processing:
   ml_feature_extraction:
-    min_residues_per_domain: 0      # Min residues filter
-    max_residues_per_domain: 50000  # Max residues filter
-    normalize_features: true        # Normalize features
-    include_secondary_structure: true  # Include DSSP
-    include_core_exterior: true     # Core/exterior data
-    include_dssp: true              # Per-residue DSSP
-
-  core_exterior:
-    method: "msms"                  # msms/biopython/fallback
-    msms_executable_dir: "./msms_executables"
-    ses_threshold: 1.0              # MSMS threshold (Å²)
-    sasa_threshold: 20.0            # Biopython threshold (Å²)
+    min_residues_per_domain: 0           # Min residues filter
+    max_residues_per_domain: 50000       # Max residues filter
+    normalize_features: true             # Normalize numeric features
+    include_secondary_structure: true    # Include DSSP features
+    include_core_exterior: true          # Include core/exterior classification
+    include_dssp: true                   # Include per-residue DSSP data
 ```
-</div>
 
-<!-- Voxelization & Performance -->
-<div style="background-color: #f7f0ff; padding: 15px; border-radius: 8px; border-left: 5px solid #9b59b6;">
-<h3>🧊 Voxelization & Performance</h3>
+#### Core/Exterior Classification
+
+```yaml
+processing:
+  core_exterior:
+    method: "msms"                       # Options: msms, biopython, fallback
+    msms_executable_dir: "./msms_executables"
+    ses_threshold: 1.0                   # Threshold for MSMS (Å²)
+    sasa_threshold: 20.0                 # Threshold for Biopython SASA (Å²)
+```
+
+#### Voxelization Settings
 
 ```yaml
 processing:
   voxelization:
-    frame_edge_length: 12.0         # Grid size (Å)
-    voxels_per_side: 21             # Grid resolution
-    atom_encoder: "CNOCBCA"         # Atom types to include
-    encode_cb: true                 # Include CB atoms
-    compression_gzip: true          # Compress output
-    voxelise_all_states: false      # Multiple states
-    process_frames: false           # Voxelize frames
-    
-performance:
-  num_cores: 10                     # 0 = auto-detect
-  batch_size: 80                    # Batch size
-  memory_limit_gb: 26               # 0 = no limit
-  use_gpu: true                     # Use GPU if available
+    frame_edge_length: 12.0              # Physical size of voxel grid (Å)
+    voxels_per_side: 21                  # Grid resolution
+    atom_encoder: "CNOCBCA"              # Atom types to include
+    encode_cb: true                      # Include CB atoms
+    compression_gzip: true               # Compress output files
+    voxelise_all_states: false           # Whether to voxelize all states in NMR structures
+    process_frames: false                # Whether to also voxelize frame directories
+    process_temps: [320, 348, 379, 413, 450]  # Temperatures to process for frame voxelization
 ```
-</div>
-</div>
+
+#### Performance Tuning
+
+```yaml
+performance:
+  num_cores: 10                          # 0 means auto-detect
+  batch_size: 80                         # Batch size for parallel processing
+  memory_limit_gb: 26                    # 0 means no limit
+  use_gpu: true                          # Use GPU acceleration if available
+```
+
+#### Logging Options
+
+```yaml
+logging:
+  verbose: true
+  level: "INFO"
+  console_level: "INFO"
+  file_level: "DEBUG"
+  show_progress_bars: true
+```
 
 ### Configuration Examples
-
-<details>
-<summary><b>🔍 Click to view example configurations</b></summary>
 
 #### Minimal Configuration (Processing a Single Domain)
 
@@ -419,209 +382,251 @@ processing:
     remove_hydrogens: true       # Clean up PDB by removing hydrogens
     remove_solvent_ions: true    # Remove water molecules and ions
 ```
-</details>
 
 ## 📊 Output Examples
 
-The mdCATH processor generates multiple structured outputs for analysis and modeling:
+The mdCATH processor generates multiple structured outputs for analysis and modeling. Here are key examples:
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; margin-bottom: 30px;">
+### 1. RMSF Analysis Results
 
-<!-- RMSF Analysis Results -->
-<div style="background-color: #f0f7ff; padding: 15px; border-radius: 8px;">
-<h3>📈 RMSF Analysis Results</h3>
-<p><b>File:</b> <code>outputs/RMSF/replica_average/average/rmsf_all_temperatures_all_replicas.csv</code></p>
+**File: `outputs/RMSF/replica_average/average/rmsf_all_temperatures_all_replicas.csv`**
 
-<div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; overflow-x: auto;">
-domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,rmsf_average<br>
-12asA00,1,MET,1.243,1.321,1.467,1.589,1.723,1.469<br>
-12asA00,2,LYS,1.103,1.174,1.256,1.392,1.532,1.291<br>
+```csv
+domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,rmsf_average
+12asA00,1,MET,1.243,1.321,1.467,1.589,1.723,1.469
+12asA00,2,LYS,1.103,1.174,1.256,1.392,1.532,1.291
 12asA00,3,ILE,0.936,0.987,1.075,1.156,1.267,1.084
-</div>
+```
 
-<p>Average RMSF values across replicas and temperatures for each residue.</p>
-</div>
+This file contains average RMSF values across replicas and temperatures for each residue, providing a comprehensive view of protein flexibility.
 
-<!-- ML-Ready Feature Datasets -->
-<div style="background-color: #f0fff7; padding: 15px; border-radius: 8px;">
-<h3>🧠 ML-Ready Feature Datasets</h3>
-<p><b>File:</b> <code>outputs/ML_features/final_dataset_temperature_average.csv</code></p>
+### 2. ML-Ready Feature Datasets
 
-<div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; overflow-x: auto; white-space: nowrap;">
-domain_id,resid,resname,rmsf_320,...,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,...<br>
-12asA00,1,MET,1.243,...,330,0.000,exterior,0.85,C,13,1,2,0.00,0.00,1.469<br>
-12asA00,2,LYS,1.103,...,330,0.003,exterior,0.63,T,12,1,2,-0.42,0.33,1.291<br>
-</div>
+**File: `outputs/ML_features/final_dataset_temperature_average.csv`**
 
-<p>Comprehensive dataset with RMSF values and structural features.</p>
-</div>
-</div>
+```csv
+domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded,phi_norm,psi_norm,rmsf_average
+12asA00,1,MET,1.243,1.321,1.467,1.589,1.723,330,0.000,exterior,0.85,C,13,1,2,0.00,0.00,1.469
+12asA00,2,LYS,1.103,1.174,1.256,1.392,1.532,330,0.003,exterior,0.63,T,12,1,2,-0.42,0.33,1.291
+12asA00,3,ILE,0.936,0.987,1.075,1.156,1.267,330,0.006,core,0.15,E,9,0,1,-0.41,-0.75,1.084
+```
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; margin-bottom: 30px;">
+This comprehensive dataset combines RMSF values with structural features:
+- Temperature-specific RMSF values (`rmsf_320` through `rmsf_450`)
+- `protein_size`: Total number of residues in the protein
+- `normalized_resid`: Position in the sequence (normalized 0-1)
+- `core_exterior`: Whether the residue is buried (`core`) or exposed (`exterior`)
+- `relative_accessibility`: Relative solvent accessibility (0-1 scale)
+- `dssp`: Secondary structure assignment (H=helix, E=sheet, C=coil, etc.)
+- `phi_norm` & `psi_norm`: Normalized backbone torsion angles
+- Encoded versions of categorical features for ML compatibility
 
-<!-- PDB Files and Frames -->
-<div style="background-color: #fff7f0; padding: 15px; border-radius: 8px;">
-<h3>🧬 PDB Files and Frames</h3>
+### 3. PDB Files and Frames
 
-<p><b>Cleaned PDB:</b> <code>outputs/pdbs/12asA00.pdb</code></p>
-<p><b>Frames:</b> <code>outputs/frames/replica_0/320/12asA00_frame_0.pdb</code></p>
+**Cleaned PDB File: `outputs/pdbs/12asA00.pdb`**
 
-<div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; overflow-x: auto;">
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1<br>
-ATOM      1  N   MET A   1      -9.152  25.423   4.759  1.00  0.00           N<br>
-ATOM      2  CA  MET A   1      -9.446  24.674   3.532  1.00  0.00           C<br>
+```
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+ATOM      1  N   MET A   1      -9.152  25.423   4.759  1.00  0.00           N  
+ATOM      2  CA  MET A   1      -9.446  24.674   3.532  1.00  0.00           C  
+ATOM      3  C   MET A   1      -8.188  24.560   2.681  1.00  0.00           C  
+ATOM      4  O   MET A   1      -7.506  25.552   2.424  1.00  0.00           O  
+ATOM      5  CB  MET A   1     -10.523  25.351   2.701  1.00  0.00           C  
 ...
-</div>
+```
 
-<p>Cleaned PDB structures and representative trajectory frames.</p>
-</div>
+**Frame File: `outputs/frames/replica_0/320/12asA00_frame_0.pdb`**
 
-<!-- Visualizations -->
-<div style="background-color: #f7f0ff; padding: 15px; border-radius: 8px;">
-<h3>📊 Visualizations</h3>
+```
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+ATOM      1  N   MET A   1      91.234  45.677  59.421  1.00  0.00           N  
+ATOM      2  CA  MET A   1      91.786  44.892  58.342  1.00  0.00           C  
+ATOM      3  C   MET A   1      90.841  44.732  57.188  1.00  0.00           C  
+...
+```
 
-<p>The project generates multiple high-quality visualizations:</p>
+These files represent:
+- Cleaned, standardized PDB structures with corrected formatting
+- Representative frames extracted from the molecular dynamics trajectories using advanced clustering methods
 
-<ul>
-  <li>🌡️ <b>RMSF Distribution by Temperature</b></li>
-  <li>🧬 <b>RMSF by Secondary Structure</b></li>
-  <li>🔍 <b>Feature Correlations</b></li>
-  <li>🌈 <b>Temperature Summary Heatmap</b></li>
-  <li>🧪 <b>Amino Acid-specific RMSF Analysis</b></li>
-</ul>
+### 4. Core/Exterior Classification Results
 
-<p>Located in <code>outputs/visualizations/</code> directory.</p>
-</div>
-</div>
+**Integrated into feature dataset with per-residue classification:**
 
-<details>
-<summary><b>🖼️ Click to see example visualization previews</b></summary>
+```csv
+domain_id,resid,core_exterior,relative_accessibility
+12asA00,1,exterior,0.85
+12asA00,2,exterior,0.63
+12asA00,3,core,0.15
+12asA00,4,core,0.08
+...
+```
 
-<div style="text-align: center;">
-  <p><b>RMSF Distribution by Temperature:</b></p>
-  <img src="https://i.imgur.com/UYsKg2P.png" alt="RMSF Violin Plot" width="500"/>
-  
-  <p><b>RMSF by Secondary Structure:</b></p>
-  <img src="https://i.imgur.com/FWsZnc7.png" alt="DSSP-RMSF Correlation" width="500"/>
-  
-  <p><b>Amino Acid-specific RMSF Analysis:</b></p>
-  <img src="https://i.imgur.com/JdEb4uQ.png" alt="Amino Acid RMSF" width="500"/>
-</div>
-</details>
+This data classifies each residue as either "core" (buried inside the protein) or "exterior" (exposed to solvent) based on its relative accessibility value.
+
+### 5. Visualizations
+
+The project generates multiple publication-quality visualizations in the `outputs/visualizations/` directory:
+
+#### RMSF Distribution by Temperature
+![RMSF Violin Plot](outputs/visualizations/rmsf_violin_plot.png)
+
+A violin plot showing the distribution of RMSF values across different temperatures, with detailed statistics on each temperature.
+
+#### RMSF by Secondary Structure
+![DSSP-RMSF Correlation](outputs/visualizations/dssp_rmsf_correlation_plot.png)
+
+A comprehensive plot showing the relationship between secondary structure elements and RMSF values, revealing which structural elements are most flexible.
+
+#### Feature Correlations
+![Feature Correlations](outputs/visualizations/feature_correlation_plot.png)
+
+A heatmap of correlations between different features, helping to identify which structural properties most strongly correlate with flexibility.
+
+#### Temperature Summary Heatmap
+![Temperature Summary](outputs/visualizations/temperature_summary.png)
+
+A heatmap showing RMSF patterns across domains and temperatures, highlighting temperature-dependent flexibility changes.
+
+#### Amino Acid-specific RMSF Analysis
+![Amino Acid RMSF](outputs/visualizations/amino_acid_rmsf_colored.png)
+
+A detailed analysis of flexibility by amino acid type, colored by biochemical properties, showing which residues are inherently more flexible.
 
 ## 📂 Project Structure
 
 The mdCATH processor has the following structure:
 
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9em; overflow-x: auto; white-space: pre;">
+```
 mdcath-processor/
-├── 📄 main.py                  <span style="color: #6a737d;">// Main entry point</span>
-├── 📄 setup.py                 <span style="color: #6a737d;">// Installation setup</span>
-├── 📄 setup.sh                 <span style="color: #6a737d;">// Setup script</span>
-├── 📄 requirements.txt         <span style="color: #6a737d;">// Dependencies</span>
-├── 📄 check_environment.py     <span style="color: #6a737d;">// Environment verification</span>
-├── 📄 LICENSE                  <span style="color: #6a737d;">// MIT License</span>
-├── 📄 README.md                <span style="color: #6a737d;">// This documentation</span>
-├── 📄 all_domain_ids.txt       <span style="color: #6a737d;">// List of all available domains</span>
-├── 📁 msms_executables/        <span style="color: #6a737d;">// Surface calculation tools</span>
-├── 📁 src/                     <span style="color: #6a737d;">// Source code</span>
-│   └── 📁 mdcath/              <span style="color: #6a737d;">// Main package</span>
-│       ├── 📄 __init__.py      <span style="color: #6a737d;">// Package initialization</span>
-│       ├── 📁 config/          <span style="color: #6a737d;">// Configuration handling</span>
-│       ├── 📁 core/            <span style="color: #6a737d;">// Core functionality</span>
-│       └── 📁 processing/      <span style="color: #6a737d;">// Processing modules</span>
-└── 📁 outputs/                 <span style="color: #6a737d;">// Generated outputs</span>
-    ├── 📁 frames/              <span style="color: #6a737d;">// Extracted frames</span>
-    ├── 📁 ML_features/         <span style="color: #6a737d;">// Feature datasets</span>
-    ├── 📁 pdbs/                <span style="color: #6a737d;">// Cleaned PDB files</span>
-    ├── 📁 RMSF/                <span style="color: #6a737d;">// RMSF analysis</span>
-    ├── 📁 visualizations/      <span style="color: #6a737d;">// Generated plots</span>
-    └── 📁 voxelized/           <span style="color: #6a737d;">// Voxelized data</span>
-</div>
+├── main.py                  # Main entry point
+├── setup.py                 # Installation setup
+├── setup.sh                 # Setup script
+├── requirements.txt         # Dependencies
+├── check_environment.py     # Environment verification
+├── LICENSE                  # MIT License
+├── README.md                # This documentation
+├── all_domain_ids.txt       # List of all available domains
+├── msms_executables/        # Surface calculation tools
+│   ├── msms.x86_64Linux2.2.6.1
+│   ├── pdb_to_xyzr
+│   └── other MSMS tools...
+├── src/                     # Source code
+│   └── mdcath/              # Main package
+│       ├── __init__.py      # Package initialization
+│       ├── config/          # Configuration handling
+│       │   ├── __init__.py
+│       │   └── default_config.yaml
+│       ├── core/            # Core functionality
+│       │   ├── __init__.py
+│       │   └── data_loader.py
+│       └── processing/      # Processing modules
+│           ├── __init__.py
+│           ├── core_exterior.py
+│           ├── features.py
+│           ├── pdb.py
+│           ├── rmsf.py
+│           ├── visualization.py
+│           └── voxelizer.py
+└── outputs/                 # Generated outputs
+    ├── frames/              # Extracted frames
+    │   └── replica_X/       # Organized by replica
+    │       └── temperature/ # And temperature
+    ├── ML_features/         # Feature datasets
+    ├── pdbs/                # Cleaned PDB files
+    ├── RMSF/                # RMSF analysis
+    │   ├── replicas/        # Per-replica data
+    │   └── replica_average/ # Averaged data
+    ├── visualizations/      # Generated plots
+    └── voxelized/           # Voxelized data
+```
 
 ## 🧩 Modules Explained
 
-<table>
-<thead>
-  <tr>
-    <th>Module</th>
-    <th>Purpose</th>
-    <th>Key Functions</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><b>📦 data_loader.py</b></td>
-    <td>Extracts data from H5 files</td>
-    <td>
-      • <code>H5DataLoader</code>: Main class for loading H5 files<br>
-      • <code>extract_rmsf()</code>: Gets RMSF data<br>
-      • <code>extract_pdb()</code>: Gets PDB structures<br>
-      • <code>extract_coordinates()</code>: Gets atomic coordinates
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 core_exterior.py</b></td>
-    <td>Classifies residue locations</td>
-    <td>
-      • <code>compute_core_exterior()</code>: Main classification<br>
-      • <code>run_dssp_once()</code>: Runs DSSP with caching<br>
-      • <code>compute_core_exterior_biopython()</code>: Uses Biopython
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 pdb.py</b></td>
-    <td>Handles PDB cleaning & frames</td>
-    <td>
-      • <code>fix_pdb()</code>: Coordinates PDB cleaning<br>
-      • <code>fix_pdb_with_pdbutils()</code>: PDB cleaning<br>
-      • <code>extract_frames()</code>: Extracts frames from trajectories
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 rmsf.py</b></td>
-    <td>Analyzes RMSF data</td>
-    <td>
-      • <code>calculate_replica_averages()</code>: Averages across replicas<br>
-      • <code>calculate_temperature_average()</code>: Cross-temp averages<br>
-      • <code>process_rmsf_data()</code>: High-level processing
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 features.py</b></td>
-    <td>Generates ML-ready features</td>
-    <td>
-      • <code>generate_ml_features()</code>: Creates feature datasets<br>
-      • <code>save_ml_features()</code>: Saves to CSV files<br>
-      • <code>process_ml_features()</code>: High-level generation
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 visualization.py</b></td>
-    <td>Creates visualizations</td>
-    <td>
-      • <code>create_temperature_summary_heatmap()</code>: Temperature analysis<br>
-      • <code>create_amino_acid_rmsf_plot()</code>: AA-specific RMSF<br>
-      • <code>create_dssp_rmsf_correlation_plot()</code>: Structure correlations
-    </td>
-  </tr>
-  <tr>
-    <td><b>📦 voxelizer.py</b></td>
-    <td>Voxelizes protein structures</td>
-    <td>
-      • <code>voxelize_domains()</code>: Converts to voxel grids
-    </td>
-  </tr>
-</tbody>
-</table>
+Here's a detailed explanation of the key modules:
+
+### Core Modules
+
+#### `data_loader.py`
+
+This module handles extracting data from the mdCATH H5 files:
+
+- `H5DataLoader`: Main class for loading and validating H5 files
+  - `_validate_h5()`: Checks if the H5 file has the expected structure
+  - `extract_rmsf()`: Gets RMSF data for a specific temperature and replica
+  - `extract_pdb()`: Extracts PDB structure data
+  - `extract_dssp()`: Gets secondary structure assignments
+  - `extract_coordinates()`: Gets atomic coordinates with RMSD and gyration data
+
+- `process_domains()`: Processes multiple domains in parallel, coordinating data extraction
+
+### Processing Modules
+
+#### `core_exterior.py`
+
+Classifies protein residues as core (buried) or exterior (exposed):
+
+- `compute_core_exterior()`: Main classification function
+- `prepare_pdb_for_dssp()`: Prepares PDB files for DSSP analysis
+- `run_dssp_once()`: Runs DSSP with caching for efficiency
+- `compute_core_exterior_biopython()`: Uses Biopython's SASA calculation
+- `fallback_core_exterior()`: Simple position-based fallback method
+- `run_dssp_analysis()`: Gets secondary structure and accessibility data
+
+#### `pdb.py`
+
+Handles PDB cleaning and frame extraction:
+
+- `save_pdb_file()`: Saves a cleaned PDB file
+- `fix_pdb()`: Coordinates PDB cleaning
+- `fix_pdb_with_pdbutils()`: Uses pdbUtils library for proper PDB cleaning
+- `fix_pdb_fallback()`: Simpler cleaning method when pdbUtils isn't available
+- `extract_frames()`: Extracts frames based on various clustering methods
+
+#### `rmsf.py`
+
+Analyzes RMSF data across replicas and temperatures:
+
+- `calculate_replica_averages()`: Calculates average RMSF across replicas
+- `calculate_temperature_average()`: Averages RMSF across temperatures
+- `save_rmsf_data()`: Saves all RMSF data to CSV files
+- `process_rmsf_data()`: High-level function to handle all RMSF processing
+
+#### `features.py`
+
+Generates ML-ready features from all data sources:
+
+- `generate_ml_features()`: Creates features from RMSF, DSSP, and structure data
+- `save_ml_features()`: Saves feature datasets to CSV files
+- `process_ml_features()`: High-level function to generate all ML features
+
+#### `visualization.py`
+
+Creates comprehensive visualizations:
+
+- `create_temperature_summary_heatmap()`: RMSF across temperatures
+- `create_temperature_average_summary()`: Statistical summary of RMSF data
+- `create_rmsf_distribution_plots()`: RMSF distribution visualizations
+- `create_amino_acid_rmsf_plot()`: RMSF by amino acid type
+- `create_replica_variance_plot()`: Variance analysis across replicas
+- `create_dssp_rmsf_correlation_plot()`: Structure-flexibility correlations
+- `create_feature_correlation_plot()`: Feature correlation heatmap
+- `create_frames_visualization()`: Frame extraction visualization
+- `create_ml_features_plot()`: ML feature analysis
+- `create_summary_plot()`: Overall project summary plot
+- `create_voxel_info_plot()`: Voxelization information visualization
+
+#### `voxelizer.py`
+
+Handles 3D voxelization of protein structures:
+
+- `voxelize_domains()`: Converts protein structures to voxel grids using aposteriori
 
 ## 🔮 Advanced Usage
 
-<div style="display: grid; grid-template-columns: 1fr; grid-gap: 20px; margin-bottom: 30px;">
+### Custom Data Processing Workflow
 
-<!-- Custom Data Processing -->
-<div style="background-color: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3498db;">
-<h3>🔬 Custom Data Processing Workflow</h3>
+You can create custom workflows by directly using the module functions:
 
 ```python
 from src.mdcath.core.data_loader import H5DataLoader
@@ -652,16 +657,40 @@ pdb.save_pdb_file(pdb_data, pdb_path, config)
 # Analyze core/exterior
 ce_data = core_exterior.compute_core_exterior(pdb_path, config)
 
+# Analyze secondary structure
+dssp_results = core_exterior.run_dssp_analysis(pdb_path)
+
 # Extract just one frame using RMSD clustering
 pdb.extract_frames(coords, resids, resnames, "12asA00", 
                   "custom_output", "320", "0", config,
                   rmsd_data, gyration_data)
 ```
-</div>
 
-<!-- ML Model Building -->
-<div style="background-color: #f0fff7; padding: 15px; border-radius: 8px; border-left: 5px solid #2ecc71;">
-<h3>🧠 Using Extracted Features for Machine Learning</h3>
+### Parallel Processing for Large Datasets
+
+You can leverage the built-in parallel processing capabilities:
+
+```python
+from src.mdcath.core.data_loader import process_domains
+import multiprocessing
+import yaml
+
+# Load configuration
+with open('src/mdcath/config/default_config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+# Set parallelization options
+num_cores = max(1, multiprocessing.cpu_count() - 2)  # Use all but 2 cores
+config['performance']['num_cores'] = num_cores
+config['performance']['batch_size'] = 20  # Process 20 domains at a time
+
+# Process multiple domains in parallel
+domain_ids = ["12asA00", "153lA00", "16pkA02", "1a02F00", "1a15A00"]
+results = process_domains(domain_ids, config['input']['mdcath_folder'], config, 
+                         num_cores=num_cores)
+```
+
+### Using Extracted Features for Machine Learning
 
 ```python
 import pandas as pd
@@ -697,36 +726,8 @@ importance = pd.DataFrame({
 }).sort_values('Importance', ascending=False)
 print(importance)
 ```
-</div>
 
-<!-- Parallel Processing -->
-<div style="background-color: #fff7f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e67e22;">
-<h3>⚡ Parallel Processing for Large Datasets</h3>
-
-```python
-from src.mdcath.core.data_loader import process_domains
-import multiprocessing
-import yaml
-
-# Load configuration
-with open('src/mdcath/config/default_config.yaml', 'r') as f:
-    config = yaml.safe_load(f)
-
-# Set parallelization options
-num_cores = max(1, multiprocessing.cpu_count() - 2)  # Use all but 2 cores
-config['performance']['num_cores'] = num_cores
-config['performance']['batch_size'] = 20  # Process 20 domains at a time
-
-# Process multiple domains in parallel
-domain_ids = ["12asA00", "153lA00", "16pkA02", "1a02F00", "1a15A00"]
-results = process_domains(domain_ids, config['input']['mdcath_folder'], config, 
-                         num_cores=num_cores)
-```
-</div>
-
-<!-- PyTorch Integration -->
-<div style="background-color: #f7f0ff; padding: 15px; border-radius: 8px; border-left: 5px solid #9b59b6;">
-<h3>🔥 Using Voxelized Data with PyTorch</h3>
+### Using Voxelized Data with PyTorch
 
 ```python
 import h5py
@@ -766,16 +767,12 @@ class Voxel3DCNN(nn.Module):
 # Create model instance
 model = Voxel3DCNN()
 ```
-</div>
-</div>
 
 ## 📚 API Reference
 
-<div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-<h3 style="margin-top: 0;">🔍 Key Classes and Functions</h3>
+Although the project doesn't have a formal API, here are the key functions and classes you can use:
 
-<details>
-<summary><b>📦 Data Loading API</b></summary>
+### Data Loading
 
 ```python
 from src.mdcath.core.data_loader import H5DataLoader, process_domains
@@ -792,10 +789,8 @@ dssp_data = loader.extract_dssp(temp, replica)
 # Process multiple domains in parallel
 results = process_domains(domain_ids, data_dir, config, num_cores)
 ```
-</details>
 
-<details>
-<summary><b>📦 PDB Processing API</b></summary>
+### PDB Processing
 
 ```python
 from src.mdcath.processing import pdb
@@ -810,10 +805,8 @@ pdb_results = pdb.process_pdb_data(domain_results, config)
 pdb.extract_frames(coords, resids, resnames, domain_id, output_dir, 
                   temperature, replica, config, rmsd_data, gyration_data)
 ```
-</details>
 
-<details>
-<summary><b>📦 RMSF Analysis API</b></summary>
+### RMSF Analysis
 
 ```python
 from src.mdcath.processing import rmsf
@@ -827,10 +820,8 @@ temp_avg = rmsf.calculate_temperature_average(replica_averages)
 # Process all RMSF data
 rmsf_results = rmsf.process_rmsf_data(domain_results, config)
 ```
-</details>
 
-<details>
-<summary><b>📦 Structure Analysis API</b></summary>
+### Core/Exterior Classification & DSSP Analysis
 
 ```python
 from src.mdcath.processing import core_exterior
@@ -844,10 +835,8 @@ dssp_data = core_exterior.run_dssp_analysis(pdb_file)
 # Get cached DSSP results
 dssp_results = core_exterior.collect_dssp_data(pdb_file, domain_id, temp, replica)
 ```
-</details>
 
-<details>
-<summary><b>📦 ML Features API</b></summary>
+### ML Feature Generation
 
 ```python
 from src.mdcath.processing import features
@@ -861,10 +850,8 @@ features.save_ml_features(feature_dfs, output_dir)
 # Process all ML features
 ml_results = features.process_ml_features(rmsf_results, pdb_results, domain_results, config)
 ```
-</details>
 
-<details>
-<summary><b>📦 Visualization API</b></summary>
+### Visualization
 
 ```python
 from src.mdcath.processing import visualization
@@ -877,10 +864,8 @@ visualization.create_amino_acid_rmsf_plot({"average": temperature_average}, outp
 # Generate all visualizations
 vis_results = visualization.generate_visualizations(rmsf_results, ml_results, domain_results, config)
 ```
-</details>
 
-<details>
-<summary><b>📦 Voxelization API</b></summary>
+### Voxelization
 
 ```python
 from src.mdcath.processing import voxelizer
@@ -888,29 +873,21 @@ from src.mdcath.processing import voxelizer
 # Voxelize protein structures
 voxel_results = voxelizer.voxelize_domains(pdb_results, config)
 ```
-</details>
-</div>
 
 ## 🐞 Troubleshooting
 
 ### Common Issues
 
-<div style="display: grid; grid-template-columns: 1fr; grid-gap: 15px; margin-bottom: 30px;">
+#### H5 File Validation Errors
 
-<!-- H5 File Validation Errors -->
-<div style="background-color: #fff8f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e74c3c;">
-<h4>❌ H5 File Validation Errors</h4>
-
-<div style="background-color: #f8d7da; padding: 10px; border-radius: 5px; color: #721c24; font-family: monospace; font-size: 0.85em;">
+```
 ERROR: Failed to validate H5 file for domain 12asA00
-</div>
+```
 
-<h5>💡 Solution:</h5>
-<ul>
-  <li>Ensure the H5 file has the expected structure</li>
-  <li>Check that the domain_id is correct and exists in the H5 file</li>
-  <li>Validate that temperature and replica data are present</li>
-</ul>
+**Solution**:
+- Ensure the H5 file has the expected structure
+- Check that the domain_id is correct and exists in the H5 file
+- Validate that the temperature and replica data are present
 
 ```python
 # Manually check H5 file structure
@@ -920,136 +897,110 @@ with h5py.File('/path/to/mdcath_dataset_12asA00.h5', 'r') as f:
     domain = f['12asA00']  # Access domain group
     print(list(domain.keys()))  # Should contain temperature groups
 ```
-</div>
 
-<!-- DSSP Processing Failures -->
-<div style="background-color: #fff8f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e67e22;">
-<h4>⚠️ DSSP Processing Failures</h4>
+#### DSSP Processing Failures
 
-<div style="background-color: #fff3cd; padding: 10px; border-radius: 5px; color: #856404; font-family: monospace; font-size: 0.85em;">
+```
 WARNING: DSSP failed for domain 12asA00, using fallback
-</div>
+```
 
-<h5>💡 Solution:</h5>
-<ul>
-  <li>Ensure DSSP is installed (mkdssp or dssp command should be available)</li>
-  <li>Check that PDB files have proper CRYST1 records and atom formatting</li>
-  <li>Verify PDBs have complete backbone atoms (N, CA, C)</li>
-</ul>
+**Solution**:
+- Ensure DSSP is installed (mkdssp or dssp command should be available)
+- Check that PDB files have proper CRYST1 records and atom formatting
+- Verify PDBs have complete backbone atoms (N, CA, C)
 
 ```python
 # Try manually running DSSP
 import subprocess
 result = subprocess.run(['mkdssp', 'outputs/pdbs/12asA00.pdb'], 
-                      capture_output=True, text=True)
+                        capture_output=True, text=True)
 print(result.stdout)
 print(result.stderr)
 ```
-</div>
 
-<!-- PDB Cleaning Errors -->
-<div style="background-color: #fff8f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e74c3c;">
-<h4>❌ PDB Cleaning Errors</h4>
+#### PDB Cleaning Errors
 
-<div style="background-color: #f8d7da; padding: 10px; border-radius: 5px; color: #721c24; font-family: monospace; font-size: 0.85em;">
+```
 ERROR: Failed to clean PDB with pdbUtils: AttributeError: 'module' object has no attribute 'pdb2df'
-</div>
+```
 
-<h5>💡 Solution:</h5>
-<ul>
-  <li>Install pdbUtils: <code>pip install pdbUtils</code></li>
-  <li>Check that the PDB file is in a valid format</li>
-  <li>If pdbUtils fails, the code will use the fallback method</li>
-</ul>
-</div>
+**Solution**:
+- Install pdbUtils: `pip install pdbUtils`
+- Check that the PDB file is in a valid format
+- If pdbUtils fails, the code will use the fallback method
 
-<!-- Memory Errors -->
-<div style="background-color: #fff8f0; padding: 15px; border-radius: 8px; border-left: 5px solid #e74c3c;">
-<h4>❌ Memory Errors with Large Datasets</h4>
+#### Memory Errors with Large Datasets
 
-<div style="background-color: #f8d7da; padding: 10px; border-radius: 5px; color: #721c24; font-family: monospace; font-size: 0.85em;">
+```
 MemoryError: Unable to allocate array with shape (10000, 10000, 3)
-</div>
+```
 
-<h5>💡 Solution:</h5>
-<ul>
-  <li>Adjust batch size to process fewer domains at once</li>
-  <li>Set memory limits in the configuration</li>
-  <li>Process domains in smaller batches</li>
-</ul>
+**Solution**:
+- Adjust batch size to process fewer domains at once
+- Set memory limits in the configuration
+- Process domains in smaller batches
 
 ```yaml
 performance:
   batch_size: 20  # Reduce batch size
   memory_limit_gb: 16  # Set memory limit
 ```
-</div>
-</div>
+
+#### Missing MSMS Executables
+
+```
+WARNING: MSMS executables not found in ./msms_executables, falling back to Biopython
+```
+
+**Solution**:
+- Ensure MSMS executables are in the correct directory
+- Make sure executables have execute permissions: `chmod +x msms_executables/*`
+- The code will automatically fall back to Biopython methods if MSMS is unavailable
 
 ### Debugging Tips
 
-<div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
-<h4 style="margin-top: 0;">🔍 Advanced Debugging Techniques</h4>
+1. **Check logs**: Examine `mdcath_processing.log` for detailed error messages
 
-<ol>
-  <li><b>Check logs</b>: Examine <code>mdcath_processing.log</code> for detailed error messages</li>
-  
-  <li><b>Enable verbose logging</b>:
-  <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin: 10px 0;">
-  logging:<br>
-  &nbsp;&nbsp;verbose: true<br>
-  &nbsp;&nbsp;level: "DEBUG"<br>
-  &nbsp;&nbsp;console_level: "DEBUG"
-  </div>
-  </li>
-  
-  <li><b>Test individual components</b>:
-  <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin: 10px 0;">
-  # Test data loading<br>
-  from src.mdcath.core.data_loader import H5DataLoader<br>
-  loader = H5DataLoader("/path/to/mdcath_dataset_12asA00.h5", config)<br>
-  print(loader._validate_h5())  # Should return True if file is valid<br>
-  <br>
-  # Test PDB cleaning<br>
-  from src.mdcath.processing import pdb<br>
-  pdb_data = loader.extract_pdb()<br>
-  success = pdb.save_pdb_file(pdb_data, "test.pdb", config)<br>
-  print(f"PDB cleaning success: {success}")
-  </div>
-  </li>
-  
-  <li><b>Process a single domain first</b>:
-  <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.85em; margin: 10px 0;">
-  python main.py --domain_ids 12asA00 --output ./test_output
-  </div>
-  </li>
-</ol>
-</div>
+2. **Enable verbose logging**:
+```yaml
+logging:
+  verbose: true
+  level: "DEBUG"
+  console_level: "DEBUG"
+```
+
+3. **Test individual components**:
+```python
+# Test data loading
+from src.mdcath.core.data_loader import H5DataLoader
+loader = H5DataLoader("/path/to/mdcath_dataset_12asA00.h5", config)
+print(loader._validate_h5())  # Should return True if file is valid
+
+# Test PDB cleaning
+from src.mdcath.processing import pdb
+pdb_data = loader.extract_pdb()
+success = pdb.save_pdb_file(pdb_data, "test.pdb", config)
+print(f"PDB cleaning success: {success}")
+```
+
+4. **Process a single domain first**:
+```bash
+python main.py --domain_ids 12asA00 --output ./test_output
+```
 
 ## 🤝 Contributing
 
 Contributions to the mdCATH processor are welcome! Here's how to get started:
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; margin-bottom: 30px;">
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes
+4. Test your changes thoroughly
+5. Commit your changes: `git commit -m 'Add amazing feature'`
+6. Push to the branch: `git push origin feature/amazing-feature`
+7. Open a Pull Request
 
-<!-- How to Contribute -->
-<div style="background-color: #f0fff7; padding: 15px; border-radius: 8px; border-left: 5px solid #2ecc71;">
-<h3>🚀 How to Contribute</h3>
-
-<ol>
-  <li>Fork the repository</li>
-  <li>Create a feature branch: <code>git checkout -b feature/amazing-feature</code></li>
-  <li>Make your changes</li>
-  <li>Test your changes thoroughly</li>
-  <li>Commit your changes: <code>git commit -m 'Add amazing feature'</code></li>
-  <li>Push to the branch: <code>git push origin feature/amazing-feature</code></li>
-  <li>Open a Pull Request</li>
-</ol>
-</div>
-
-<!-- Development Setup -->
-<div style="background-color: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3498db;">
-<h3>⚙️ Development Setup</h3>
+### Development Setup
 
 ```bash
 # Clone repository
@@ -1069,8 +1020,6 @@ pip install pytest pytest-cov black flake8
 # Create a branch
 git checkout -b feature/my-feature
 ```
-</div>
-</div>
 
 ### Code Style and Testing
 
@@ -1083,8 +1032,6 @@ We recommend following these guidelines:
 - Ensure all existing tests pass
 
 ## 📜 License
-
-<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 5px solid #17a2b8;">
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -1103,13 +1050,12 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 ```
-</div>
 
 ---
 
 <p align="center">
   <a href="https://github.com/Felixburton7/mdcath-processor">
-    <img src="https://img.shields.io/badge/✨%20Star%20This%20Repo-If%20Useful-blue?style=for-the-badge" alt="Star This Repo">
+    <img src="https://img.shields.io/badge/✨%20Star%20This%20Repo-If%20Useful-blue" alt="Star This Repo">
   </a>
 </p>
 
