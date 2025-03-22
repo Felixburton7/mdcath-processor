@@ -132,37 +132,36 @@ feature_data = results['feature_data']
 ## 🔄 Dataflow Pipeline
 
 The mdCATH processor transforms raw H5 data through a sophisticated pipeline of processing steps:
-
+    
 ```mermaid
 graph TD
     A[mdCATH H5 Files] --> B[Data Extraction]
 
     B --> PDB[PDB Processing]
     B --> RMSF[RMSF Processing]
-    
 
     %% PDB pipeline
     PDB --> Clean[PDB Cleaning]
+    Clean --> DSSP[DSSP Processing]
     Clean --> Classify[Core/Exterior Classification]
     Clean --> Frames[Frame Extraction]
-    Clean --> DSSP[DSSP Processing]
 
-    %% RMSF pipeline
+    %% RMSF pipeline (right)
     RMSF --> Replica[RMSF Analysis]
     Replica --> TempAvg[Temperature‑averaged RMSF]
     TempAvg --> ML[ML‑Ready Dataset]
 
-    %% Coordinate pipeline
+    %% Voxelization (left)
     Frames --> Vox[Voxelization]
     Vox --> ML
 
-    %% Feature generation
+    %% Feature generation (center)
     Classify --> Features[Feature Generation]
-    Frames --> Features
     DSSP --> Features
+    Frames --> Features
     Features --> ML
 
-    %% Optional downstream
+    %% Downstream
     ML --> Viz[Visualizations]
 ```
 
