@@ -46,7 +46,7 @@ A comprehensive suite for processing mdCATH protein dynamics dataset to facilita
 
 ## 🌟 Overview
 
-The mdCATH Dataset Processor is designed to transform raw molecular dynamics data from the mdCATH dataset into structured, analysis-ready formats optimized for machine learning applications. This pipeline extracts, processes, and organizes protein dynamics data, with a focus on Root Mean Square Fluctuation (RMSF) prediction.
+The mdCATH Dataset Processor is designed to transform raw molecular dynamics data from the mdCATH dataset (https://github.com/compsciencelab/mdCATH/tree/main) into structured, analysis-ready formats optimized for machine learning applications. This pipeline extracts, processes, and organizes protein dynamics data, with a focus on Root Mean Square Fluctuation (RMSF) prediction.
 
 By providing a consistent framework for data preparation, this project enables researchers to develop machine learning models that can accurately predict protein dynamics from structural features alone, potentially accelerating drug discovery and protein engineering efforts.
 
