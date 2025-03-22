@@ -136,33 +136,39 @@ The mdCATH processor transforms raw H5 data through a sophisticated pipeline of 
 ```mermaid
 graph TD
     A[mdCATH H5 Files] --> B[Data Extraction]
-    B --> C1[PDB Data]
-    B --> C2[RMSF Data]
-    B --> C3[DSSP Data]
-    B --> C4[Coordinate Data]
-    
-    C1 --> D1[PDB Processing]
-    D1 --> E1[Cleaned PDB Files]
-    E1 --> F1[Core/Exterior Classification]
-    E1 --> D3[DSSP Processing]
-    E1 --> F2[Frame Extraction]
-    
-    C2 --> D2[RMSF Analysis]
-    D2 --> E2[Replica-level RMSF]
-    E2 --> F3[Temperature-averaged RMSF]
-    
-    
-    C4 --> D4[Coordinate Processing]
-    
-    F1 --> G[Feature Generation]
-    F2 --> H[Voxelization]
-    F3 --> G
-    D3 --> G
-    
-    G --> I[ML-Ready Datasets]
-    H --> J[Voxelized Representations]
-    
-    I --> K[Visualizations]
+
+    B --> PDB[PDB Processing]
+    B --> RMSF[RMSF Processing]
+    B --> DSSP[DSSP Processing]
+    B --> COORD[Coordinate Processing]
+
+    %% PDB pipeline
+    PDB --> Clean[PDB Cleaning]
+    Clean --> Classify[Core/Exterior Classification]
+    Clean --> Frames[Frame Extraction]
+
+    %% RMSF pipeline
+    RMSF --> Replica[RMSF Analysis]
+    Replica --> TempAvg[Temperature‑averaged RMSF]
+
+    %% DSSP pipeline
+    DSSP --> DSSPFeat[DSSP Feature Extraction]
+
+    %% Coordinate pipeline
+    COORD --> Vox[Voxelization]
+
+    %% Feature generation
+    Classify --> Features[Feature Generation]
+    Frames --> Features
+    TempAvg --> Features
+    DSSPFeat --> Features
+
+    %% Convergence
+    Features --> ML[ML‑Ready Dataset]
+    Vox --> ML
+
+    %% Optional downstream
+    ML --> Viz[Visualizations]
 ```
 
 ### Detailed Process Flow:
