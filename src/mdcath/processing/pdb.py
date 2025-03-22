@@ -8,6 +8,10 @@ import logging
 import numpy as np
 from typing import Dict, Any, Optional, List, Tuple
 from concurrent.futures import ProcessPoolExecutor, as_completed
+import numpy as np
+import os
+from sklearn.cluster import KMeans
+import random
 
 # Import pdbUtils for better PDB handling
 try:
@@ -379,10 +383,6 @@ def extract_frames(coords: np.ndarray,
     Returns:
         Boolean indicating if extraction was successful
     """
-    import numpy as np
-    import os
-    from sklearn.cluster import KMeans
-    import random
     
     frame_selection = config.get("processing", {}).get("frame_selection", {})
     method = frame_selection.get("method", "rmsd")

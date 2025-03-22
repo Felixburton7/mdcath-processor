@@ -486,7 +486,6 @@ def process_domains(domain_ids: List[str], data_dir: str, config: Dict[str, Any]
                     num_cores: int = 1) -> Dict[str, Any]:
     """
     Process multiple domains in parallel.
-    Updated to remove DSSP extraction.
     """
     from concurrent.futures import ProcessPoolExecutor, as_completed
 

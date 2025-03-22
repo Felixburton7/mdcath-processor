@@ -25,178 +25,6 @@ File Structure:
 │   ├── test.pdb
 │   └── test.xyzr
 ├── outputs
-│   ├── frames
-│   │   ├── replica_0
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_1
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_2
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_3
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   └── replica_4
-│   │       ├── 320
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 348
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 379
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 413
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       └── 450
-│   │           ├── 1a02F00_frame.pdb
-│   │           └── 1a0aA00_frame.pdb
-│   ├── ML_features
-│   │   ├── final_dataset_temperature_320.csv
-│   │   ├── final_dataset_temperature_348.csv
-│   │   ├── final_dataset_temperature_379.csv
-│   │   ├── final_dataset_temperature_413.csv
-│   │   ├── final_dataset_temperature_450.csv
-│   │   └── final_dataset_temperature_average.csv
-│   ├── pdbs
-│   │   ├── 1a02F00.pdb
-│   │   └── 1a0aA00.pdb
-│   ├── RMSF
-│   │   ├── replica_average
-│   │   │   ├── 320
-│   │   │   │   └── rmsf_replica_average_temperature320.csv
-│   │   │   ├── 348
-│   │   │   │   └── rmsf_replica_average_temperature348.csv
-│   │   │   ├── 379
-│   │   │   │   └── rmsf_replica_average_temperature379.csv
-│   │   │   ├── 413
-│   │   │   │   └── rmsf_replica_average_temperature413.csv
-│   │   │   ├── 450
-│   │   │   │   └── rmsf_replica_average_temperature450.csv
-│   │   │   └── average
-│   │   │       └── rmsf_all_temperatures_all_replicas.csv
-│   │   └── replicas
-│   │       ├── replica_0
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica0_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica0_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica0_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica0_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica0_temperature450.csv
-│   │       ├── replica_1
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica1_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica1_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica1_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica1_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica1_temperature450.csv
-│   │       ├── replica_2
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica2_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica2_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica2_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica2_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica2_temperature450.csv
-│   │       ├── replica_3
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica3_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica3_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica3_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica3_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica3_temperature450.csv
-│   │       └── replica_4
-│   │           ├── 320
-│   │           │   └── rmsf_replica4_temperature320.csv
-│   │           ├── 348
-│   │           │   └── rmsf_replica4_temperature348.csv
-│   │           ├── 379
-│   │           │   └── rmsf_replica4_temperature379.csv
-│   │           ├── 413
-│   │           │   └── rmsf_replica4_temperature413.csv
-│   │           └── 450
-│   │               └── rmsf_replica4_temperature450.csv
-│   ├── visualizations
-│   │   ├── amino_acid_rmsf_violin_plot.png
-│   │   ├── dssp_rmsf_correlation_plot.png
-│   │   ├── feature_correlation_plot.png
-│   │   ├── replica_variance_plot.png
-│   │   ├── rmsf_histogram.png
-│   │   ├── rmsf_violin_plot.png
-│   │   ├── temperature_average_summary.png
-│   │   └── temperature_summary.png
-│   └── voxelized
-│       └── mdcath_voxelized.hdf5
 ├── README.md
 ├── requirements.txt
 ├── setup.py
@@ -239,14 +67,22 @@ File Structure:
 │       └── top_level.txt
 └── test_h5_loading.py
 
-85 directories, 151 files
+11 directories, 53 files
 
 Contents of Relevant Files Below (Ignoring Binary Files):
 ---------------------------------------------------------
 ===== FILE: src/mdcath/config/default_config.yaml =====
 input:
   mdcath_folder: "/mnt/datasets/MD_CATH/data"  # Path to the mdCATH folder
-  domain_ids: ["1a02F00", "1a0aA00"]   # Empty means process default domain (12asA00)
+  domain_ids: [
+    "12asA00",
+    "153lA00",
+    "16pkA02",
+    "1a02F00",
+    "1a05A00",
+    "1a0aA00",
+    "1a0hA01",
+]
 
 temperatures: [320, 348, 379, 413, 450]
 num_replicas: 5  # Number of replicas to process per temperature
@@ -257,7 +93,7 @@ output:
 processing:
   frame_selection:
     method: "rmsd"  # Options: regular, rmsd, gyration, random
-    num_frames: 1   # Number of frames to extract per domain/temperature
+    num_frames: 4   # Number of frames to extract per domain/temperature
     cluster_method: "kmeans"  # For RMSD-based selection
 
   pdb_cleaning:
@@ -344,11 +180,16 @@ class H5DataLoader:
         self.h5_path = h5_path
         self.config = config
         self.domain_id = os.path.basename(h5_path).replace("mdcath_dataset_", "").replace(".h5", "")
-        self._validate_h5()
+        valid = self._validate_h5()
+        if valid:
+            logging.info(f"Successfully validated H5 file for domain {self.domain_id}")
+        else:
+            logging.error(f"H5 file validation failed for domain {self.domain_id}")
 
     def _validate_h5(self) -> bool:
         """
         Validate that the H5 file has the expected structure.
+        Enhanced with detailed logging and verification.
         
         Returns:
             Boolean indicating if the file is valid
@@ -359,6 +200,32 @@ class H5DataLoader:
                 if self.domain_id not in f:
                     logging.error(f"Domain {self.domain_id} not found in {self.h5_path}")
                     return False
+                
+                # Log domain attributes
+                domain_attrs = f[self.domain_id].attrs
+                logging.info(f"Domain: {self.domain_id}")
+                logging.info(f"Number of chains: {domain_attrs.get('numChains', 'N/A')}")
+                logging.info(f"Number of protein atoms: {domain_attrs.get('numProteinAtoms', 'N/A')}")
+                logging.info(f"Number of residues: {domain_attrs.get('numResidues', 'N/A')}")
+                
+                # Log atomic number information if available
+                if 'z' in f[self.domain_id]:
+                    z_data = f[self.domain_id]['z']
+                    logging.info(f"z.shape: {z_data.shape}")
+                    logging.info(f"First 10 z values: {z_data[:10]}")
+                
+                # Verify CA count matches numResidues if PDB data is available
+                if 'pdbProteinAtoms' in f[self.domain_id]:
+                    try:
+                        pdb_data = f[self.domain_id]['pdbProteinAtoms'][()].decode('utf-8').split('\n')
+                        ca_count = sum(1 for line in pdb_data if line.startswith('ATOM') and ' CA ' in line)
+                        logging.info(f"Number of CA atoms in PDB: {ca_count}")
+                        
+                        if 'numResidues' in domain_attrs and ca_count != domain_attrs['numResidues']:
+                            logging.warning(f"CA count ({ca_count}) does not match numResidues "
+                                        f"({domain_attrs['numResidues']})")
+                    except Exception as e:
+                        logging.warning(f"Could not verify CA atom count: {e}")
                 
                 # Check for required metadata fields
                 required_metadata = ["resid", "resname"]
@@ -375,18 +242,35 @@ class H5DataLoader:
                 for temp in temps:
                     if temp in f[self.domain_id]:
                         temp_found = True
+                        logging.info(f"Found temperature group: {temp}K")
                         # Check for replica groups
+                        replicas_found = 0
                         for r in range(num_replicas):
                             replica = str(r)
                             if replica in f[self.domain_id][temp]:
+                                replicas_found += 1
                                 # Check for specific datasets
-                                required_datasets = ['rmsf', 'dssp', 'coords']
+                                # Removed DSSP from required datasets
+                                required_datasets = ['rmsf', 'coords']
+                                datasets_found = []
                                 for dataset in required_datasets:
-                                    if dataset not in f[self.domain_id][temp][replica]:
+                                    if dataset in f[self.domain_id][temp][replica]:
+                                        datasets_found.append(dataset)
+                                    else:
                                         logging.warning(f"Dataset {dataset} not found for temperature {temp}, " 
                                                     f"replica {replica} in domain {self.domain_id}")
+                                
+                                # Also check for gyrationRadius and rmsd for frame selection
+                                optional_datasets = ['gyrationRadius', 'rmsd']
+                                for dataset in optional_datasets:
+                                    if dataset in f[self.domain_id][temp][replica]:
+                                        datasets_found.append(dataset)
+                                
+                                logging.info(f"Replica {replica} has datasets: {', '.join(datasets_found)}")
                             else:
                                 logging.warning(f"Replica {replica} not found for temperature {temp} in domain {self.domain_id}")
+                        
+                        logging.info(f"Found {replicas_found}/{num_replicas} replicas for temperature {temp}K")
                     else:
                         logging.warning(f"Temperature {temp} not found for domain {self.domain_id}")
                 
@@ -397,6 +281,8 @@ class H5DataLoader:
                 return True
         except Exception as e:
             logging.error(f"Failed to validate H5 file {self.h5_path}: {e}")
+            import traceback
+            logging.error(traceback.format_exc())
             return False
 
     def extract_rmsf(self, temperature: str, replica: str) -> Optional[pd.DataFrame]:
@@ -426,6 +312,8 @@ class H5DataLoader:
                 
                 # RMSF data is typically length = number_of_residues
                 rmsf_data = f[self.domain_id][temperature][replica]['rmsf'][:]
+                logging.info(f"Extracted RMSF data with shape {rmsf_data.shape} for domain {self.domain_id}, "
+                            f"temperature {temperature}, replica {replica}")
 
                 # Extract the full, per-atom arrays
                 resids_all = f[self.domain_id]['resid'][:]
@@ -447,6 +335,8 @@ class H5DataLoader:
 
                 unique_resids = sorted(residue_dict.keys())
                 unique_resnames = [residue_dict[rid] for rid in unique_resids]
+                
+                logging.info(f"Found {len(unique_resids)} unique residues for domain {self.domain_id}")
 
                 # Check dimension mismatch
                 if len(unique_resids) != len(rmsf_data):
@@ -476,9 +366,12 @@ class H5DataLoader:
                     f'rmsf_{temperature}': rmsf_data
                 })
                 
+                logging.info(f"Created RMSF DataFrame with {len(df)} rows")
                 return df
         except Exception as e:
             logging.error(f"Failed to extract RMSF data: {e}")
+            import traceback
+            logging.error(traceback.format_exc())
             return None
 
     def extract_pdb(self) -> Optional[str]:
@@ -490,12 +383,25 @@ class H5DataLoader:
         """
         try:
             with h5py.File(self.h5_path, 'r') as f:
+                if 'pdb' not in f[self.domain_id]:
+                    logging.error(f"PDB data not found for domain {self.domain_id}")
+                    return None
+                    
                 pdb_data = f[self.domain_id]['pdb'][()]
                 if isinstance(pdb_data, bytes):
-                    return pdb_data.decode('utf-8')
-                return str(pdb_data)
+                    pdb_str = pdb_data.decode('utf-8')
+                else:
+                    pdb_str = str(pdb_data)
+                    
+                # Log PDB extraction
+                num_lines = pdb_str.count('\n') + 1
+                logging.info(f"Extracted PDB data with {num_lines} lines for domain {self.domain_id}")
+                
+                return pdb_str
         except Exception as e:
             logging.error(f"Failed to extract PDB data: {e}")
+            import traceback
+            logging.error(traceback.format_exc())
             return None
 
     def extract_dssp(self, temperature: str, replica: str, frame: int = -1) -> Optional[pd.DataFrame]:
@@ -593,47 +499,110 @@ class H5DataLoader:
             logging.error(f"Failed to extract DSSP data: {e}")
             return None
 
-    def extract_coordinates(self, temperature: str, replica: str, frame: int = -1) -> Optional[Tuple[np.ndarray, List[int], List[str]]]:
+
+    def extract_coordinates(self, temperature: str, replica: str, frame: int = -1) -> Optional[Tuple[np.ndarray, List[int], List[str], np.ndarray, np.ndarray]]:
         """
         Extract coordinate data for a specific temperature, replica, and frame.
+        Now includes additional data for frame selection (RMSD and gyration radius)
 
         Args:
             temperature: Temperature (e.g., "320")
             replica: Replica (e.g., "0")
-            frame: Frame index (default: -1 for last frame)
+            frame: Frame index (default: -1 for last frame, -999 for all frames)
 
         Returns:
-            Tuple of (coords, resids, resnames) where coords shape is (n_atoms, 3),
+            Tuple of (coords, resids, resnames, rmsd_data, gyration_data) where:
+            - coords shape is (n_atoms, 3) or (n_frames, n_atoms, 3) if all frames requested
+            - rmsd_data shape is (n_frames,)
+            - gyration_data shape is (n_frames,)
             or None if extraction fails.
         """
         try:
             with h5py.File(self.h5_path, 'r') as f:
+                # Enhanced validation and logging
+                logging.info(f"Extracting coordinates for domain: {self.domain_id}")
+                logging.info(f"Domain attributes: numChains={f[self.domain_id].attrs.get('numChains', 'N/A')}, "
+                            f"numProteinAtoms={f[self.domain_id].attrs.get('numProteinAtoms', 'N/A')}, "
+                            f"numResidues={f[self.domain_id].attrs.get('numResidues', 'N/A')}")
+                
+                # Log atomic numbers (z) information
+                if 'z' in f[self.domain_id]:
+                    z_data = f[self.domain_id]['z']
+                    logging.info(f"z.shape: {z_data.shape}")
+                    logging.info(f"First 10 z values: {z_data[:10]}")
+                
+                # Count CA atoms from PDB data to verify consistency
+                if 'pdbProteinAtoms' in f[self.domain_id]:
+                    pdb_data = f[self.domain_id]['pdbProteinAtoms'][()].decode('utf-8').split('\n')
+                    ca_count = sum(1 for line in pdb_data if line.startswith('ATOM') and ' CA ' in line)
+                    logging.info(f"Number of CA atoms in PDB: {ca_count}")
+                    if 'numResidues' in f[self.domain_id].attrs:
+                        if ca_count != f[self.domain_id].attrs['numResidues']:
+                            logging.warning(f"CA count ({ca_count}) does not match numResidues "
+                                        f"({f[self.domain_id].attrs['numResidues']})")
+                
+                # Check temperature and replica existence
                 if (temperature not in f[self.domain_id]) or (replica not in f[self.domain_id][temperature]):
                     logging.warning(f"Temperature {temperature} or replica {replica} not found for domain {self.domain_id}")
                     return None
 
-                if 'coords' not in f[self.domain_id][temperature][replica]:
-                    logging.warning(f"Coordinate data not found for domain {self.domain_id}, temperature {temperature}, replica {replica}")
-                    return None
+                # Check coordinates, RMSD and gyration radius availability
+                req_datasets = ['coords']
+                opt_datasets = ['rmsd', 'gyrationRadius']
+                for dataset in req_datasets:
+                    if dataset not in f[self.domain_id][temperature][replica]:
+                        logging.warning(f"{dataset} data not found for domain {self.domain_id}, "
+                                    f"temperature {temperature}, replica {replica}")
+                        return None
 
+                # Extract coordinates
                 coords_dataset = f[self.domain_id][temperature][replica]['coords']
                 num_frames = coords_dataset.shape[0] if coords_dataset.ndim > 0 else 0
+                
                 if num_frames == 0:
-                    logging.warning(f"Empty coords dataset for domain {self.domain_id}, temperature {temperature}, replica {replica}")
+                    logging.warning(f"Empty coords dataset for domain {self.domain_id}, "
+                                f"temperature {temperature}, replica {replica}")
                     return None
 
-                # Convert negative frame index
-                if frame < 0:
-                    frame = num_frames + frame
-                if frame < 0 or frame >= num_frames:
-                    logging.warning(f"Frame index {frame} out of bounds (0-{num_frames-1}) for domain {self.domain_id}")
-                    frame = max(0, min(frame, num_frames - 1))
+                # Extract RMSD and gyration radius data for frame selection if available
+                rmsd_data = None
+                gyration_data = None
+                
+                if 'rmsd' in f[self.domain_id][temperature][replica]:
+                    rmsd_data = f[self.domain_id][temperature][replica]['rmsd'][:]
+                else:
+                    logging.info(f"RMSD data not available for {self.domain_id}, {temperature}, {replica}")
+                    rmsd_data = np.zeros(num_frames)
+                    
+                if 'gyrationRadius' in f[self.domain_id][temperature][replica]:
+                    gyration_data = f[self.domain_id][temperature][replica]['gyrationRadius'][:]
+                else:
+                    logging.info(f"Gyration radius data not available for {self.domain_id}, {temperature}, {replica}")
+                    gyration_data = np.zeros(num_frames)
+                
+                logging.info(f"Available frames: {num_frames}, RMSD shape: {rmsd_data.shape if rmsd_data is not None else 'N/A'}, "
+                            f"Gyration shape: {gyration_data.shape if gyration_data is not None else 'N/A'}")
 
-                coords = coords_dataset[frame]  # shape (n_atoms, 3)
-                if coords.ndim != 2 or coords.shape[1] != 3:
-                    logging.error(f"Unexpected coordinate shape: {coords.shape} for domain {self.domain_id}")
-                    return None
+                # Handle negative frame index or return all frames if requested
+                if frame == -999:  # Special value to request all frames
+                    coords = coords_dataset[:]
+                    logging.info(f"Extracting all {num_frames} frames")
+                else:
+                    # Convert negative frame index
+                    if frame < 0:
+                        frame = num_frames + frame
+                    if frame < 0 or frame >= num_frames:
+                        logging.warning(f"Frame index {frame} out of bounds (0-{num_frames-1}) for domain {self.domain_id}")
+                        frame = max(0, min(frame, num_frames - 1))
+                    logging.info(f"Extracting single frame {frame}")
+                    coords = coords_dataset[frame]  # shape (n_atoms, 3)
+                    
+                    # Validate coordinate shape
+                    if coords.ndim != 2 or coords.shape[1] != 3:
+                        logging.error(f"Unexpected coordinate shape: {coords.shape} for domain {self.domain_id}")
+                        return None
 
+                # Extract residue information
                 resids_all = f[self.domain_id]['resid'][:].tolist()
                 resnames_all = f[self.domain_id]['resname'][:]
                 resnames_all = [
@@ -641,24 +610,27 @@ class H5DataLoader:
                     for rn in resnames_all
                 ]
 
-                # Check shape alignment
-                if len(resids_all) != coords.shape[0]:
-                    logging.warning(
-                        f"Mismatch between residue IDs ({len(resids_all)}) and coords ({coords.shape[0]})"
-                    )
-                    min_size = min(len(resids_all), coords.shape[0])
+                # Check shape alignment for single frame
+                coord_atoms = coords.shape[0] if coords.ndim == 2 else coords.shape[1]
+                if len(resids_all) != coord_atoms:
+                    logging.warning(f"Mismatch between residue IDs ({len(resids_all)}) and "
+                                f"coords ({coord_atoms})")
+                    min_size = min(len(resids_all), coord_atoms)
                     resids_all = resids_all[:min_size]
                     resnames_all = resnames_all[:min_size]
-                    coords = coords[:min_size]
+                    if coords.ndim == 3:  # Multiple frames
+                        coords = coords[:, :min_size, :]
+                    else:  # Single frame
+                        coords = coords[:min_size]
 
-                return coords, resids_all, resnames_all
+                logging.info(f"Successfully extracted coordinates with shape {coords.shape}")
+                return coords, resids_all, resnames_all, rmsd_data, gyration_data
 
         except Exception as e:
             logging.error(f"Failed to extract coordinate data: {e}")
             import traceback
             logging.error(traceback.format_exc())
             return None
-
 
 def process_domains(domain_ids: List[str], data_dir: str, config: Dict[str, Any],
                     num_cores: int = 1) -> Dict[str, Any]:
@@ -696,6 +668,7 @@ def process_domains(domain_ids: List[str], data_dir: str, config: Dict[str, Any]
 def _process_single_domain(h5_path: str, config: Dict[str, Any]) -> Dict[str, Any]:
     """
     Process a single domain (helper function for parallel processing).
+    Updated to remove DSSP extraction.
     """
     loader = H5DataLoader(h5_path, config)
     domain_id = loader.domain_id
@@ -721,20 +694,9 @@ def _process_single_domain(h5_path: str, config: Dict[str, Any]) -> Dict[str, An
     if pdb_str:
         results["pdb_data"] = pdb_str
 
-    # Extract DSSP data
-    dssp_data = {}
-    for temp in temps:
-        dssp_data[temp] = {}
-        for r in range(num_replicas):
-            replica = str(r)
-            df_dssp = loader.extract_dssp(temp, replica)
-            if df_dssp is not None:
-                dssp_data[temp][replica] = df_dssp
-    results["dssp_data"] = dssp_data
 
     results["success"] = True
     return results
-
 ===== FILE: src/mdcath/core/__init__.py =====
 """
 Core data loading and processing functions
@@ -1207,9 +1169,12 @@ def run_dssp_analysis(pdb_file: str) -> pd.DataFrame:
         pdb_file: Path to the PDB file
         
     Returns:
-        DataFrame with columns: resid, chain, secondary_structure, relative_accessibility
+        DataFrame with columns: domain_id, resid, chain, dssp, relative_accessibility
     """
     logging.info(f"Running DSSP on {pdb_file}")
+    
+    # Extract domain_id from filename
+    domain_id = os.path.basename(pdb_file).split('.')[0]
     
     # First, verify the PDB file exists
     abs_pdb_file = os.path.abspath(pdb_file)
@@ -1254,27 +1219,39 @@ def run_dssp_analysis(pdb_file: str) -> pd.DataFrame:
             
             # Try different DSSP executables
             dssp_found = False
+            dssp_obj = None
+            
             for dssp_exec in ["dssp", "mkdssp"]:
                 dssp_path = shutil.which(dssp_exec)
                 if dssp_path:
                     try:
                         logging.info(f"Trying DSSP executable: {dssp_path}")
-                        dssp = DSSP(model, tmp_pdb, dssp=dssp_path)
+                        dssp_obj = DSSP(model, tmp_pdb, dssp=dssp_path)
                         dssp_found = True
+                        
+                        # Log secondary structure distribution
+                        ss_counts = {}
+                        for key in dssp_obj.keys():
+                            ss = dssp_obj[key][2]  # DSSP code
+                            if ss not in ss_counts:
+                                ss_counts[ss] = 0
+                            ss_counts[ss] += 1
+                        
+                        logging.info(f"DSSP secondary structure counts for {domain_id}: {ss_counts}")
                         break
                     except Exception as e:
                         logging.warning(f"Failed with {dssp_exec}: {e}")
             
-            if not dssp_found:
-                logging.warning("No DSSP executable found or all failed")
+            if not dssp_found or dssp_obj is None:
+                logging.warning(f"No DSSP executable found or all failed for {domain_id}")
                 return use_fallback_dssp(pdb_file)
             
             # Extract DSSP results
             records = []
-            for key in dssp.keys():
+            for key in dssp_obj.keys():
                 chain_id = key[0]
                 resid = key[1][1]  # residue number
-                dssp_tuple = dssp[key]
+                dssp_tuple = dssp_obj[key]
                 
                 # Extract secondary structure and relative accessibility
                 ss_code = dssp_tuple[2]  # Secondary structure code
@@ -1285,18 +1262,20 @@ def run_dssp_analysis(pdb_file: str) -> pd.DataFrame:
                     ss_code = 'C'  # Default to coil
                 
                 records.append({
+                    "domain_id": domain_id,
                     "resid": resid,
                     "chain": chain_id,
-                    "secondary_structure": ss_code,
+                    "dssp": ss_code,
                     "relative_accessibility": rel_acc
                 })
             
             if not records:
-                logging.warning("DSSP returned no records")
+                logging.warning(f"DSSP returned no records for {domain_id}")
                 return use_fallback_dssp(pdb_file)
                 
             dssp_df = pd.DataFrame(records)
-            logging.info(f"DSSP successfully extracted data for {len(dssp_df)} residues")
+            logging.info(f"DSSP successfully extracted data for {len(dssp_df)} residues in {domain_id}")
+            logging.info(f"DSSP codes distribution for {domain_id}: {dssp_df['dssp'].value_counts().to_dict()}")
             
             return dssp_df
         
@@ -1305,11 +1284,13 @@ def run_dssp_analysis(pdb_file: str) -> pd.DataFrame:
             if tmp_pdb and os.path.exists(tmp_pdb):
                 try:
                     os.remove(tmp_pdb)
-                except:
-                    pass
+                except Exception as e:
+                    logging.warning(f"Failed to remove temporary file {tmp_pdb}: {e}")
     
     except Exception as e:
-        logging.error(f"Failed to run DSSP analysis: {e}")
+        logging.error(f"Failed to run DSSP analysis for {domain_id}: {e}")
+        import traceback
+        logging.error(traceback.format_exc())
         return use_fallback_dssp(pdb_file)
 
 
@@ -1317,20 +1298,32 @@ def use_fallback_dssp(pdb_file: str) -> pd.DataFrame:
     """
     Fallback method when DSSP fails.
     Provides default secondary structure and accessibility values.
+    
+    Args:
+        pdb_file: Path to the PDB file
+        
+    Returns:
+        DataFrame with columns: domain_id, resid, chain, dssp, relative_accessibility
     """
-    logging.info(f"Using fallback secondary structure prediction for {pdb_file}")
+    # Extract domain_id from filename
+    domain_id = os.path.basename(pdb_file).split('.')[0]
+    
+    logging.info(f"Using fallback secondary structure prediction for {domain_id}")
     
     try:
         # First check if the PDB file exists
         abs_pdb_file = os.path.abspath(pdb_file)
         if not os.path.exists(abs_pdb_file):
             # Create dummy data for missing PDB
-            return pd.DataFrame({
+            dummy_df = pd.DataFrame({
+                "domain_id": [domain_id] * 20,
                 "resid": list(range(1, 21)),  # 20 dummy residues
                 "chain": ["A"] * 20,
-                "secondary_structure": ["C"] * 20,  # All coil
+                "dssp": ["C"] * 20,
                 "relative_accessibility": [0.5] * 20  # Medium accessibility
             })
+            logging.warning(f"PDB file not found for {domain_id}, using dummy data with {len(dummy_df)} residues")
+            return dummy_df
         
         # Parse PDB to get residue info
         try:
@@ -1346,34 +1339,46 @@ def use_fallback_dssp(pdb_file: str) -> pd.DataFrame:
                         if residue.id[0] == " ":  # Standard residue
                             resid = residue.id[1]
                             records.append({
+                                "domain_id": domain_id,
                                 "resid": resid,
                                 "chain": chain_id,
-                                "secondary_structure": "C",  # Default to coil
+                                "dssp": "C",  # Default to coil
                                 "relative_accessibility": 0.5  # Default to moderate accessibility
                             })
             
             if records:
-                return pd.DataFrame(records)
+                result_df = pd.DataFrame(records)
+                logging.info(f"Created fallback DSSP data for {domain_id} with {len(result_df)} residues")
+                return result_df
         except Exception as e:
-            logging.warning(f"Failed to parse PDB structure: {e}")
+            logging.warning(f"Failed to parse PDB structure for {domain_id}: {e}")
         
         # If we get here, we couldn't parse the PDB, so create dummy data
-        return pd.DataFrame({
+        dummy_df = pd.DataFrame({
+            "domain_id": [domain_id] * 20,
             "resid": list(range(1, 21)),
             "chain": ["A"] * 20,
-            "secondary_structure": ["C"] * 20,
+            "dssp": ["C"] * 20,
             "relative_accessibility": [0.5] * 20
         })
+        logging.warning(f"Failed to parse PDB for {domain_id}, using dummy data with {len(dummy_df)} residues")
+        return dummy_df
         
     except Exception as e:
-        logging.error(f"Fallback DSSP also failed: {e}")
+        logging.error(f"Fallback DSSP also failed for {domain_id}: {e}")
+        import traceback
+        logging.error(traceback.format_exc())
+        
         # Return minimal dataframe with required columns
-        return pd.DataFrame({
+        dummy_df = pd.DataFrame({
+            "domain_id": [domain_id] * 20,
             "resid": list(range(1, 21)),
             "chain": ["A"] * 20,
-            "secondary_structure": ["C"] * 20,
+            "dssp": ["C"] * 20,
             "relative_accessibility": [0.5] * 20
         })
+        logging.warning(f"Critical failure in DSSP processing for {domain_id}, using emergency dummy data")
+        return dummy_df
 ===== FILE: src/mdcath/processing/voxelizer.py =====
 #!/usr/bin/env python3
 """
@@ -1885,17 +1890,17 @@ def fix_pdb_with_pdbutils(input_pdb_path: str, output_pdb_path: str, config: Dic
 
         clean_config = config.get("pdb_cleaning", {})
 
-        # Fix ONLY the first CAY to N - more targeted approach
-        if clean_config.get("fix_first_cay", True):
-            atom_name_col = "ATOM_NAME" if "ATOM_NAME" in pdb_df.columns else "atom_name"
-            if atom_name_col in pdb_df.columns:
-                # Find the first CAY atom
-                cay_rows = pdb_df[pdb_df[atom_name_col] == "CAY"]
-                if not cay_rows.empty:
-                    first_cay_idx = cay_rows.index[0]
-                    # Change only the first CAY to N
-                    pdb_df.at[first_cay_idx, atom_name_col] = "N"
-                    logging.info("Changed first CAY atom to N")
+        # # Fix ONLY the first CAY to N - more targeted approach
+        # if clean_config.get("fix_first_cay", True):
+        #     atom_name_col = "ATOM_NAME" if "ATOM_NAME" in pdb_df.columns else "atom_name"
+        #     if atom_name_col in pdb_df.columns:
+        #         # Find the first CAY atom
+        #         cay_rows = pdb_df[pdb_df[atom_name_col] == "CAY"]
+        #         if not cay_rows.empty:
+        #             first_cay_idx = cay_rows.index[0]
+        #             # Change only the first CAY to N
+        #             pdb_df.at[first_cay_idx, atom_name_col] = "N"
+        #             logging.info("Changed first CAY atom to N")
 
         # Replace HSD/HSE/HSP with HIS
         if clean_config.get("correct_unusual_residue_names", True):
@@ -2117,13 +2122,16 @@ def extract_frames(coords: np.ndarray,
                    output_dir: str,
                    temperature: str,
                    replica: str,
-                   config: Dict[str, Any]) -> bool:
+                   config: Dict[str, Any],
+                   rmsd_data: Optional[np.ndarray] = None,
+                   gyration_data: Optional[np.ndarray] = None) -> bool:
     """
     Extract frames from coordinate data and save as PDB files.
     Uses the cleaned PDB as a template and updates only the coordinates.
+    Supports multiple frame selection methods: regular, random, gyration, and rmsd.
 
     Args:
-        coords: Coordinate data
+        coords: Coordinate data (can be single frame or multiple frames)
         resids: Residue IDs
         resnames: Residue names
         domain_id: Domain identifier
@@ -2131,13 +2139,21 @@ def extract_frames(coords: np.ndarray,
         temperature: Temperature
         replica: Replica index
         config: Configuration dictionary
+        rmsd_data: RMSD data for frame selection (if available)
+        gyration_data: Gyration radius data for frame selection (if available)
 
     Returns:
         Boolean indicating if extraction was successful
     """
+    import numpy as np
+    import os
+    from sklearn.cluster import KMeans
+    import random
+    
     frame_selection = config.get("processing", {}).get("frame_selection", {})
     method = frame_selection.get("method", "rmsd")
     num_frames = frame_selection.get("num_frames", 1)
+    cluster_method = frame_selection.get("cluster_method", "kmeans")
 
     try:
         # Create output directory for frames
@@ -2157,34 +2173,89 @@ def extract_frames(coords: np.ndarray,
         with open(pdb_path, 'r') as f:
             pdb_lines = f.readlines()
         
-        # For simplicity, extract only the last frame if num_frames == 1
-        if num_frames == 1:
-            frame_idx = -1
-            logging.debug(f"Coordinate shape for domain {domain_id}: {coords.shape}")
-
-            # Handle shape differences
-            if coords.ndim == 1:
-                logging.warning(f"Coordinates shape {coords.shape} - expected 2D array.")
-                if len(coords) == 3:  # Single XYZ
-                    frame_coords = np.array([coords])
-                else:
-                    logging.error(f"Cannot reshape coords with length {len(coords)}")
-                    return False
-            elif coords.ndim == 2:
-                # shape: (atoms, xyz)
-                frame_coords = coords
-            elif coords.ndim == 3:
-                # shape: (frames, atoms, xyz)
-                frame_coords = coords[frame_idx]
+        # Determine frame indices to extract
+        frame_indices = []
+        
+        # If coordinates are already a single frame (num_frames == 1 case)
+        if coords.ndim == 2:
+            logging.info(f"Processing single frame for domain {domain_id}")
+            frame_indices = [0]  # We already have the frame we want
+            # Reshape to make the processing logic consistent
+            coords = np.expand_dims(coords, axis=0)
+        else:
+            # Handle multi-frame selection (num_frames > 1)
+            total_frames = coords.shape[0]
+            logging.info(f"Selecting {num_frames} frames from {total_frames} available frames using {method} method")
+            
+            if num_frames >= total_frames:
+                # Use all frames if requested number exceeds available
+                frame_indices = list(range(total_frames))
+                logging.warning(f"Requested {num_frames} frames but only {total_frames} are available")
             else:
-                logging.error(f"Unsupported coordinate dims: {coords.ndim}")
-                return False
-
-            # Verify final shape is (atoms, 3)
-            if frame_coords.ndim != 2 or frame_coords.shape[1] != 3:
-                logging.error(f"Coordinates have invalid shape {frame_coords.shape}")
-                return False
-
+                if method == "regular":
+                    # Evenly spaced frames
+                    step = total_frames // num_frames
+                    frame_indices = [i * step for i in range(num_frames)]
+                
+                elif method == "random":
+                    # Random selection without replacement
+                    frame_indices = random.sample(range(total_frames), num_frames)
+                
+                elif method == "gyration":
+                    # Select frames based on gyration radius
+                    if gyration_data is None or len(gyration_data) != total_frames:
+                        logging.warning("Gyration data not available or invalid, falling back to regular sampling")
+                        step = total_frames // num_frames
+                        frame_indices = [i * step for i in range(num_frames)]
+                    else:
+                        # Select diverse frames by gyration radius
+                        sorted_indices = np.argsort(gyration_data)
+                        step = len(sorted_indices) // num_frames
+                        frame_indices = [sorted_indices[i * step] for i in range(num_frames)]
+                
+                elif method == "rmsd":
+                    # Selection based on RMSD clustering
+                    if rmsd_data is None or len(rmsd_data) != total_frames:
+                        logging.warning("RMSD data not available or invalid, falling back to regular sampling")
+                        step = total_frames // num_frames
+                        frame_indices = [i * step for i in range(num_frames)]
+                    else:
+                        # Use k-means clustering on RMSD values
+                        if cluster_method == "kmeans":
+                            # Reshape for k-means
+                            rmsd_reshaped = rmsd_data.reshape(-1, 1)
+                            
+                            # Apply k-means clustering
+                            kmeans = KMeans(n_clusters=num_frames, random_state=42, n_init=10)
+                            cluster_labels = kmeans.fit_predict(rmsd_reshaped)
+                            
+                            # Select the frame closest to each cluster center
+                            frame_indices = []
+                            for i in range(num_frames):
+                                cluster_points = np.where(cluster_labels == i)[0]
+                                if len(cluster_points) > 0:
+                                    # Get the point closest to the cluster center
+                                    cluster_center = kmeans.cluster_centers_[i]
+                                    distances = np.abs(rmsd_reshaped[cluster_points] - cluster_center)
+                                    closest_idx = cluster_points[np.argmin(distances)]
+                                    frame_indices.append(closest_idx)
+                        else:
+                            logging.warning(f"Unsupported cluster method: {cluster_method}, using regular sampling")
+                            step = total_frames // num_frames
+                            frame_indices = [i * step for i in range(num_frames)]
+                else:
+                    logging.warning(f"Unsupported frame selection method: {method}, using regular sampling")
+                    step = total_frames // num_frames
+                    frame_indices = [i * step for i in range(num_frames)]
+        
+        logging.info(f"Selected frame indices: {frame_indices}")
+        
+        # Process each selected frame
+        success_count = 0
+        
+        for frame_idx in frame_indices:
+            frame_coords = coords[frame_idx]
+            
             # Create a mapping from resid to coordinates index
             resid_to_coord = {}
             for i, resid in enumerate(resids):
@@ -2255,20 +2326,21 @@ def extract_frames(coords: np.ndarray,
             
             # Check if we've used all coordinates
             coords_used = len(atom_coord_mapping)
-            logging.info(f"Used {coords_used}/{len(frame_coords)} coordinates for {domain_id}")
+            logging.info(f"Used {coords_used}/{len(frame_coords)} coordinates for frame {frame_idx}")
             
-            # Write out the single-frame PDB
-            frame_path = os.path.join(frame_dir, f"{domain_id}_frame.pdb")
+            # Write out the frame PDB
+            if num_frames == 1:
+                frame_path = os.path.join(frame_dir, f"{domain_id}_frame.pdb")
+            else:
+                frame_path = os.path.join(frame_dir, f"{domain_id}_frame_{frame_idx}.pdb")
+                
             with open(frame_path, 'w') as f:
                 f.writelines(new_pdb_lines)
-
-            logging.info(f"Extracted 1-frame PDB for domain {domain_id} at T={temperature}, rep={replica}")
-            return True
-
-        else:
-            # Not implemented
-            logging.warning(f"Multiple-frame extraction not implemented; requested {num_frames}.")
-            return False
+            
+            success_count += 1
+            logging.info(f"Extracted frame {frame_idx} for domain {domain_id} at T={temperature}, rep={replica}")
+        
+        return success_count > 0
 
     except Exception as e:
         logging.error(f"Failed to extract frames for domain {domain_id}: {e}")
@@ -2279,6 +2351,7 @@ def extract_frames(coords: np.ndarray,
 def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str, Any]) -> Dict[str, Any]:
     """
     Process PDB data for all domains: save cleaned PDB, optionally extract frames, etc.
+    Updated to handle the enhanced frame selection.
 
     Args:
         domain_results: Dictionary with processing results for all domains
@@ -2327,8 +2400,9 @@ def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str
     # Extract frames from HDF5 trajectories
     temps = [str(t) for t in config.get("temperatures", [320, 348, 379, 413, 450])]
     num_replicas = config.get("num_replicas", 5)
+    num_frames = config.get("processing", {}).get("frame_selection", {}).get("num_frames", 1)
 
-    logging.info("Extracting frames from trajectories...")
+    logging.info(f"Extracting {num_frames} frames from trajectories...")
     for domain_id, result in tqdm(results.items(), desc="Extracting frames"):
         if not result.get("pdb_saved", False):
             continue
@@ -2344,12 +2418,18 @@ def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str
         for temp in temps:
             for r in range(num_replicas):
                 replica = str(r)
-                coords_result = loader.extract_coordinates(temp, replica)
+                
+                # Extract coordinates with RMSD and gyration data
+                # Use special value -999 to request all frames if we need multiple
+                frame_param = -999 if num_frames > 1 else -1
+                coords_result = loader.extract_coordinates(temp, replica, frame=frame_param)
+                
                 if coords_result is not None:
-                    coords, resids, resnames = coords_result
+                    coords, resids, resnames, rmsd_data, gyration_data = coords_result
                     extract_success = extract_frames(
                         coords, resids, resnames,
-                        domain_id, output_dir, temp, replica, config
+                        domain_id, output_dir, temp, replica, config,
+                        rmsd_data, gyration_data
                     )
                     if extract_success:
                         if "frames" not in results[domain_id]:
@@ -2357,7 +2437,6 @@ def process_pdb_data(domain_results: Dict[str, Dict[str, Any]], config: Dict[str
                         results[domain_id]["frames"].append((temp, replica))
 
     return results
-
 ===== FILE: src/mdcath/processing/features.py =====
 
 
@@ -2519,6 +2598,12 @@ def generate_ml_features(rmsf_data: Dict[str, pd.DataFrame],
                     return 2  # Coil, Loop, or other
 
             df["secondary_structure_encoded"] = df["dssp"].apply(encode_ss)
+
+            # Log DSSP encoding distribution
+            dssp_codes = df["dssp"].value_counts().to_dict()
+            encoded_values = df["secondary_structure_encoded"].value_counts().to_dict()
+            logging.info(f"DSSP distribution for temp {temp}: {dssp_codes}")
+            logging.info(f"Encoded SS distribution for temp {temp}: {encoded_values}")
 
             # Reorder columns to put domain_id first
             cols = df.columns.tolist()
@@ -3251,178 +3336,6 @@ Folder Structure in Data Directory:
 │   ├── test.pdb
 │   └── test.xyzr
 ├── outputs
-│   ├── frames
-│   │   ├── replica_0
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_1
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_2
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   ├── replica_3
-│   │   │   ├── 320
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 348
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 379
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   ├── 413
-│   │   │   │   ├── 1a02F00_frame.pdb
-│   │   │   │   └── 1a0aA00_frame.pdb
-│   │   │   └── 450
-│   │   │       ├── 1a02F00_frame.pdb
-│   │   │       └── 1a0aA00_frame.pdb
-│   │   └── replica_4
-│   │       ├── 320
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 348
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 379
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       ├── 413
-│   │       │   ├── 1a02F00_frame.pdb
-│   │       │   └── 1a0aA00_frame.pdb
-│   │       └── 450
-│   │           ├── 1a02F00_frame.pdb
-│   │           └── 1a0aA00_frame.pdb
-│   ├── ML_features
-│   │   ├── final_dataset_temperature_320.csv
-│   │   ├── final_dataset_temperature_348.csv
-│   │   ├── final_dataset_temperature_379.csv
-│   │   ├── final_dataset_temperature_413.csv
-│   │   ├── final_dataset_temperature_450.csv
-│   │   └── final_dataset_temperature_average.csv
-│   ├── pdbs
-│   │   ├── 1a02F00.pdb
-│   │   └── 1a0aA00.pdb
-│   ├── RMSF
-│   │   ├── replica_average
-│   │   │   ├── 320
-│   │   │   │   └── rmsf_replica_average_temperature320.csv
-│   │   │   ├── 348
-│   │   │   │   └── rmsf_replica_average_temperature348.csv
-│   │   │   ├── 379
-│   │   │   │   └── rmsf_replica_average_temperature379.csv
-│   │   │   ├── 413
-│   │   │   │   └── rmsf_replica_average_temperature413.csv
-│   │   │   ├── 450
-│   │   │   │   └── rmsf_replica_average_temperature450.csv
-│   │   │   └── average
-│   │   │       └── rmsf_all_temperatures_all_replicas.csv
-│   │   └── replicas
-│   │       ├── replica_0
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica0_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica0_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica0_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica0_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica0_temperature450.csv
-│   │       ├── replica_1
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica1_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica1_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica1_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica1_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica1_temperature450.csv
-│   │       ├── replica_2
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica2_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica2_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica2_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica2_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica2_temperature450.csv
-│   │       ├── replica_3
-│   │       │   ├── 320
-│   │       │   │   └── rmsf_replica3_temperature320.csv
-│   │       │   ├── 348
-│   │       │   │   └── rmsf_replica3_temperature348.csv
-│   │       │   ├── 379
-│   │       │   │   └── rmsf_replica3_temperature379.csv
-│   │       │   ├── 413
-│   │       │   │   └── rmsf_replica3_temperature413.csv
-│   │       │   └── 450
-│   │       │       └── rmsf_replica3_temperature450.csv
-│   │       └── replica_4
-│   │           ├── 320
-│   │           │   └── rmsf_replica4_temperature320.csv
-│   │           ├── 348
-│   │           │   └── rmsf_replica4_temperature348.csv
-│   │           ├── 379
-│   │           │   └── rmsf_replica4_temperature379.csv
-│   │           ├── 413
-│   │           │   └── rmsf_replica4_temperature413.csv
-│   │           └── 450
-│   │               └── rmsf_replica4_temperature450.csv
-│   ├── visualizations
-│   │   ├── amino_acid_rmsf_violin_plot.png
-│   │   ├── dssp_rmsf_correlation_plot.png
-│   │   ├── feature_correlation_plot.png
-│   │   ├── replica_variance_plot.png
-│   │   ├── rmsf_histogram.png
-│   │   ├── rmsf_violin_plot.png
-│   │   ├── temperature_average_summary.png
-│   │   └── temperature_summary.png
-│   └── voxelized
-│       └── mdcath_voxelized.hdf5
 ├── README.md
 ├── requirements.txt
 ├── setup.py
@@ -3465,7 +3378,7 @@ Folder Structure in Data Directory:
 │       └── top_level.txt
 └── test_h5_loading.py
 
-85 directories, 151 files
+11 directories, 53 files
 
 Extracting First 10 Lines from Each File in Data Directory (Excluding Binary & pipeline.log):
 -------------------------------------------------------------------------------------
@@ -3676,10 +3589,10 @@ Unnamed repository; edit this file 'description' to name the repository.
 ref: refs/heads/main
 
 ===== FILE: ./.git/refs/remotes/origin/main =====
-16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7
+7929c8518d63c10d4b01bec71a9a509251e89544
 
 ===== FILE: ./.git/refs/heads/main =====
-16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7
+ed288409e8faed2d92b867370f91e3c81e91a9fb
 
 ===== FILE: ./.git/info/exclude =====
 # git ls-files --others --exclude-from=.git/info/exclude
@@ -3690,7 +3603,7 @@ ref: refs/heads/main
 # *~
 
 ===== FILE: ./.git/COMMIT_EDITMSG =====
-fixed bugs
+updated pipeline with sampel output
 
 ===== FILE: ./.git/hooks/pre-applypatch.sample =====
 #!/bin/sh
@@ -3852,17 +3765,22 @@ e5d234b3768d56a714b360b82486d7dcf1c1daf9 000000000000000000000000000000000000000
 0000000000000000000000000000000000000000 e5d234b3768d56a714b360b82486d7dcf1c1daf9 Felix Burton <felixburton2002@gmail.com> 1742428799 +0000	Branch: renamed refs/heads/master to refs/heads/main
 e5d234b3768d56a714b360b82486d7dcf1c1daf9 e7829511d2beaccc14b25cd651bbef6837f0ef10 Felix Burton <felixburton2002@gmail.com> 1742428809 +0000	commit: initial commit
 e7829511d2beaccc14b25cd651bbef6837f0ef10 16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 Felix Burton <felixburton2002@gmail.com> 1742603805 +0000	commit: fixed bugs
+16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 7929c8518d63c10d4b01bec71a9a509251e89544 Felix Burton <felixburton2002@gmail.com> 1742604292 +0000	commit: readme
+7929c8518d63c10d4b01bec71a9a509251e89544 ed288409e8faed2d92b867370f91e3c81e91a9fb Felix Burton <felixburton2002@gmail.com> 1742648708 +0000	commit: updated pipeline with sampel output
 
 ===== FILE: ./.git/logs/refs/remotes/origin/main =====
 0000000000000000000000000000000000000000 e5d234b3768d56a714b360b82486d7dcf1c1daf9 Felix Burton <felixburton2002@gmail.com> 1742428801 +0000	update by push
 e5d234b3768d56a714b360b82486d7dcf1c1daf9 e7829511d2beaccc14b25cd651bbef6837f0ef10 Felix Burton <felixburton2002@gmail.com> 1742428813 +0000	update by push
 e7829511d2beaccc14b25cd651bbef6837f0ef10 16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 Felix Burton <felixburton2002@gmail.com> 1742603810 +0000	update by push
+16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 7929c8518d63c10d4b01bec71a9a509251e89544 Felix Burton <felixburton2002@gmail.com> 1742604294 +0000	update by push
 
 ===== FILE: ./.git/logs/refs/heads/main =====
 0000000000000000000000000000000000000000 e5d234b3768d56a714b360b82486d7dcf1c1daf9 Felix Burton <felixburton2002@gmail.com> 1742428799 +0000	commit (initial): first commit
 e5d234b3768d56a714b360b82486d7dcf1c1daf9 e5d234b3768d56a714b360b82486d7dcf1c1daf9 Felix Burton <felixburton2002@gmail.com> 1742428799 +0000	Branch: renamed refs/heads/master to refs/heads/main
 e5d234b3768d56a714b360b82486d7dcf1c1daf9 e7829511d2beaccc14b25cd651bbef6837f0ef10 Felix Burton <felixburton2002@gmail.com> 1742428809 +0000	commit: initial commit
 e7829511d2beaccc14b25cd651bbef6837f0ef10 16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 Felix Burton <felixburton2002@gmail.com> 1742603805 +0000	commit: fixed bugs
+16dc0354d39edebbe7342eed9cad9d8e1e2b5ca7 7929c8518d63c10d4b01bec71a9a509251e89544 Felix Burton <felixburton2002@gmail.com> 1742604292 +0000	commit: readme
+7929c8518d63c10d4b01bec71a9a509251e89544 ed288409e8faed2d92b867370f91e3c81e91a9fb Felix Burton <felixburton2002@gmail.com> 1742648708 +0000	commit: updated pipeline with sampel output
 
 ===== FILE: ./LICENSE =====
 MIT License
@@ -3875,1074 +3793,6 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_320.csv =====
-domain_id,resid,resname,rmsf_320,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded
-1a0aA00,0,MET,1.3483024,63,0.0,exterior,0.9521276595744681,C,13,1,2
-1a0aA00,1,LYS,1.1942909,63,0.016129032258064516,exterior,0.6341463414634146,T,12,1,2
-1a0aA00,2,ARG,1.0236586,63,0.03225806451612903,exterior,0.7258064516129032,T,2,1,2
-1a0aA00,3,GLU,0.88456726,63,0.04838709677419355,exterior,0.5154639175257731,C,7,1,2
-1a0aA00,4,SER,0.80763894,63,0.06451612903225806,exterior,0.5461538461538461,C,15,1,2
-1a0aA00,5,HSD,0.727569,63,0.08064516129032258,exterior,0.4782608695652174,H,9,1,0
-1a0aA00,6,LYS,0.65099525,63,0.0967741935483871,exterior,0.7073170731707317,H,12,1,0
-1a0aA00,7,HSD,0.57902086,63,0.11290322580645161,exterior,0.7663043478260869,H,9,1,0
-1a0aA00,8,ALA,0.5618905,63,0.12903225806451613,exterior,0.3867924528301887,H,1,1,0
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_average.csv =====
-domain_id,resid,resname,rmsf_320,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded,rmsf_average
-1a0aA00,0,MET,1.3483024,63,0.0,exterior,0.9521276595744681,C,13,1,2,1.3483024
-1a0aA00,1,LYS,1.1942909,63,0.016129032258064516,exterior,0.6341463414634146,T,12,1,2,1.1942909
-1a0aA00,2,ARG,1.0236586,63,0.03225806451612903,exterior,0.7258064516129032,T,2,1,2,1.0236586
-1a0aA00,3,GLU,0.88456726,63,0.04838709677419355,exterior,0.5154639175257731,C,7,1,2,0.88456726
-1a0aA00,4,SER,0.80763894,63,0.06451612903225806,exterior,0.5461538461538461,C,15,1,2,0.80763894
-1a0aA00,5,HSD,0.727569,63,0.08064516129032258,exterior,0.4782608695652174,H,9,1,0,0.727569
-1a0aA00,6,LYS,0.65099525,63,0.0967741935483871,exterior,0.7073170731707317,H,12,1,0,0.65099525
-1a0aA00,7,HSD,0.57902086,63,0.11290322580645161,exterior,0.7663043478260869,H,9,1,0,0.57902086
-1a0aA00,8,ALA,0.5618905,63,0.12903225806451613,exterior,0.3867924528301887,H,1,1,0,0.5618905
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_379.csv =====
-domain_id,resid,resname,rmsf_379,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded
-1a0aA00,0,MET,1.4772995,63,0.0,exterior,0.9521276595744681,C,13,1,2
-1a0aA00,1,LYS,1.3467977,63,0.016129032258064516,exterior,0.6341463414634146,C,12,1,2
-1a0aA00,2,ARG,1.2123555,63,0.03225806451612903,exterior,0.7258064516129032,C,2,1,2
-1a0aA00,3,GLU,1.0923307,63,0.04838709677419355,exterior,0.5154639175257731,C,7,1,2
-1a0aA00,4,SER,0.9989087,63,0.06451612903225806,exterior,0.5461538461538461,C,15,1,2
-1a0aA00,5,HSD,0.9201416,63,0.08064516129032258,exterior,0.4782608695652174,S,9,1,2
-1a0aA00,6,LYS,0.86415035,63,0.0967741935483871,exterior,0.7073170731707317,C,12,1,2
-1a0aA00,7,HSD,0.8167307,63,0.11290322580645161,exterior,0.7663043478260869,H,9,1,0
-1a0aA00,8,ALA,0.8115508,63,0.12903225806451613,exterior,0.3867924528301887,H,1,1,0
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_348.csv =====
-domain_id,resid,resname,rmsf_348,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded
-1a0aA00,0,MET,1.4334629,63,0.0,exterior,0.9521276595744681,C,13,1,2
-1a0aA00,1,LYS,1.2852292,63,0.016129032258064516,exterior,0.6341463414634146,C,12,1,2
-1a0aA00,2,ARG,1.1520655,63,0.03225806451612903,exterior,0.7258064516129032,S,2,1,2
-1a0aA00,3,GLU,1.0097101,63,0.04838709677419355,exterior,0.5154639175257731,S,7,1,2
-1a0aA00,4,SER,0.9123613,63,0.06451612903225806,exterior,0.5461538461538461,S,15,1,2
-1a0aA00,5,HSD,0.83743477,63,0.08064516129032258,exterior,0.4782608695652174,S,9,1,2
-1a0aA00,6,LYS,0.7914341,63,0.0967741935483871,exterior,0.7073170731707317,C,12,1,2
-1a0aA00,7,HSD,0.72878,63,0.11290322580645161,exterior,0.7663043478260869,C,9,1,2
-1a0aA00,8,ALA,0.7131204,63,0.12903225806451613,exterior,0.3867924528301887,C,1,1,2
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_450.csv =====
-domain_id,resid,resname,rmsf_450,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded
-1a0aA00,0,MET,1.5951369,63,0.0,exterior,0.9521276595744681,C,13,1,2
-1a0aA00,1,LYS,1.4604483,63,0.016129032258064516,exterior,0.6341463414634146,T,12,1,2
-1a0aA00,2,ARG,1.3335836,63,0.03225806451612903,exterior,0.7258064516129032,T,2,1,2
-1a0aA00,3,GLU,1.2270706,63,0.04838709677419355,exterior,0.5154639175257731,T,7,1,2
-1a0aA00,4,SER,1.1463414,63,0.06451612903225806,exterior,0.5461538461538461,C,15,1,2
-1a0aA00,5,HSD,1.0700214,63,0.08064516129032258,exterior,0.4782608695652174,T,9,1,2
-1a0aA00,6,LYS,1.0232189,63,0.0967741935483871,exterior,0.7073170731707317,T,12,1,2
-1a0aA00,7,HSD,0.9782146,63,0.11290322580645161,exterior,0.7663043478260869,S,9,1,2
-1a0aA00,8,ALA,0.9594307,63,0.12903225806451613,exterior,0.3867924528301887,S,1,1,2
-
-===== FILE: ./outputs/ML_features/final_dataset_temperature_413.csv =====
-domain_id,resid,resname,rmsf_413,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded
-1a0aA00,0,MET,1.535583,63,0.0,exterior,0.9521276595744681,C,13,1,2
-1a0aA00,1,LYS,1.3957214,63,0.016129032258064516,exterior,0.6341463414634146,C,12,1,2
-1a0aA00,2,ARG,1.2685184,63,0.03225806451612903,exterior,0.7258064516129032,C,2,1,2
-1a0aA00,3,GLU,1.1422019,63,0.04838709677419355,exterior,0.5154639175257731,C,7,1,2
-1a0aA00,4,SER,1.065963,63,0.06451612903225806,exterior,0.5461538461538461,S,15,1,2
-1a0aA00,5,HSD,1.0004411,63,0.08064516129032258,exterior,0.4782608695652174,S,9,1,2
-1a0aA00,6,LYS,0.96211654,63,0.0967741935483871,exterior,0.7073170731707317,C,12,1,2
-1a0aA00,7,HSD,0.92500556,63,0.11290322580645161,exterior,0.7663043478260869,S,9,1,2
-1a0aA00,8,ALA,0.90814066,63,0.12903225806451613,exterior,0.3867924528301887,C,1,1,2
-
-===== FILE: ./outputs/RMSF/replicas/replica_2/450/rmsf_replica2_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.576657
-1a0aA00,1,LYS,1.449326
-1a0aA00,2,ARG,1.3184797
-1a0aA00,3,GLU,1.2020646
-1a0aA00,4,SER,1.1092825
-1a0aA00,5,HSD,1.03165
-1a0aA00,6,LYS,0.9916885
-1a0aA00,7,HSD,0.9476638
-1a0aA00,8,ALA,0.9263482
-
-===== FILE: ./outputs/RMSF/replicas/replica_2/379/rmsf_replica2_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.486446
-1a0aA00,1,LYS,1.3436912
-1a0aA00,2,ARG,1.2161818
-1a0aA00,3,GLU,1.1121883
-1a0aA00,4,SER,1.0212007
-1a0aA00,5,HSD,0.95545167
-1a0aA00,6,LYS,0.93970597
-1a0aA00,7,HSD,0.8710641
-1a0aA00,8,ALA,0.85942423
-
-===== FILE: ./outputs/RMSF/replicas/replica_2/348/rmsf_replica2_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.3438317
-1a0aA00,1,LYS,1.1628337
-1a0aA00,2,ARG,0.98899806
-1a0aA00,3,GLU,0.78073865
-1a0aA00,4,SER,0.66014934
-1a0aA00,5,HSD,0.5683823
-1a0aA00,6,LYS,0.5556865
-1a0aA00,7,HSD,0.54684573
-1a0aA00,8,ALA,0.5087722
-
-===== FILE: ./outputs/RMSF/replicas/replica_2/413/rmsf_replica2_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.5180621
-1a0aA00,1,LYS,1.3557527
-1a0aA00,2,ARG,1.2430704
-1a0aA00,3,GLU,1.084986
-1a0aA00,4,SER,0.9785675
-1a0aA00,5,HSD,0.8939153
-1a0aA00,6,LYS,0.8452332
-1a0aA00,7,HSD,0.82844514
-1a0aA00,8,ALA,0.8422664
-
-===== FILE: ./outputs/RMSF/replicas/replica_2/320/rmsf_replica2_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.1646829
-1a0aA00,1,LYS,1.0131446
-1a0aA00,2,ARG,0.8290087
-1a0aA00,3,GLU,0.72083545
-1a0aA00,4,SER,0.69494045
-1a0aA00,5,HSD,0.6436807
-1a0aA00,6,LYS,0.5260527
-1a0aA00,7,HSD,0.5048531
-1a0aA00,8,ALA,0.57275873
-
-===== FILE: ./outputs/RMSF/replicas/replica_4/450/rmsf_replica4_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.5668608
-1a0aA00,1,LYS,1.4300203
-1a0aA00,2,ARG,1.2976882
-1a0aA00,3,GLU,1.1884801
-1a0aA00,4,SER,1.113481
-1a0aA00,5,HSD,1.037043
-1a0aA00,6,LYS,0.9926844
-1a0aA00,7,HSD,0.95811844
-1a0aA00,8,ALA,0.9481535
-
-===== FILE: ./outputs/RMSF/replicas/replica_4/379/rmsf_replica4_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.7543902
-1a0aA00,1,LYS,1.6238198
-1a0aA00,2,ARG,1.4525822
-1a0aA00,3,GLU,1.333633
-1a0aA00,4,SER,1.2282166
-1a0aA00,5,HSD,1.126744
-1a0aA00,6,LYS,1.0666938
-1a0aA00,7,HSD,1.02929
-1a0aA00,8,ALA,0.97728163
-
-===== FILE: ./outputs/RMSF/replicas/replica_4/348/rmsf_replica4_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.4582078
-1a0aA00,1,LYS,1.3222756
-1a0aA00,2,ARG,1.2127962
-1a0aA00,3,GLU,1.1044127
-1a0aA00,4,SER,1.0218058
-1a0aA00,5,HSD,0.9168606
-1a0aA00,6,LYS,0.873983
-1a0aA00,7,HSD,0.744759
-1a0aA00,8,ALA,0.71165997
-
-===== FILE: ./outputs/RMSF/replicas/replica_4/413/rmsf_replica4_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.5753905
-1a0aA00,1,LYS,1.4575608
-1a0aA00,2,ARG,1.3407844
-1a0aA00,3,GLU,1.2185456
-1a0aA00,4,SER,1.1469868
-1a0aA00,5,HSD,1.0841664
-1a0aA00,6,LYS,1.0452274
-1a0aA00,7,HSD,0.96590567
-1a0aA00,8,ALA,0.9230095
-
-===== FILE: ./outputs/RMSF/replicas/replica_4/320/rmsf_replica4_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.2959518
-1a0aA00,1,LYS,1.1318272
-1a0aA00,2,ARG,0.937099
-1a0aA00,3,GLU,0.78042084
-1a0aA00,4,SER,0.662699
-1a0aA00,5,HSD,0.60237837
-1a0aA00,6,LYS,0.58158493
-1a0aA00,7,HSD,0.52150637
-1a0aA00,8,ALA,0.5021656
-
-===== FILE: ./outputs/RMSF/replicas/replica_0/450/rmsf_replica0_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.6510745
-1a0aA00,1,LYS,1.511354
-1a0aA00,2,ARG,1.3840455
-1a0aA00,3,GLU,1.2687927
-1a0aA00,4,SER,1.1770655
-1a0aA00,5,HSD,1.0775056
-1a0aA00,6,LYS,1.0026208
-1a0aA00,7,HSD,0.92482156
-1a0aA00,8,ALA,0.87528
-
-===== FILE: ./outputs/RMSF/replicas/replica_0/379/rmsf_replica0_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.3748816
-1a0aA00,1,LYS,1.204677
-1a0aA00,2,ARG,1.0503837
-1a0aA00,3,GLU,0.9162814
-1a0aA00,4,SER,0.8170538
-1a0aA00,5,HSD,0.75173515
-1a0aA00,6,LYS,0.7013601
-1a0aA00,7,HSD,0.67923796
-1a0aA00,8,ALA,0.7133326
-
-===== FILE: ./outputs/RMSF/replicas/replica_0/348/rmsf_replica0_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.5692973
-1a0aA00,1,LYS,1.4050725
-1a0aA00,2,ARG,1.2579968
-1a0aA00,3,GLU,1.0861257
-1a0aA00,4,SER,0.95714736
-1a0aA00,5,HSD,0.870287
-1a0aA00,6,LYS,0.7932945
-1a0aA00,7,HSD,0.72311026
-1a0aA00,8,ALA,0.72987825
-
-===== FILE: ./outputs/RMSF/replicas/replica_0/413/rmsf_replica0_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.5348728
-1a0aA00,1,LYS,1.383954
-1a0aA00,2,ARG,1.2424289
-1a0aA00,3,GLU,1.124453
-1a0aA00,4,SER,1.0636528
-1a0aA00,5,HSD,0.9922364
-1a0aA00,6,LYS,0.96015614
-1a0aA00,7,HSD,0.9305036
-1a0aA00,8,ALA,0.93326944
-
-===== FILE: ./outputs/RMSF/replicas/replica_0/320/rmsf_replica0_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.5170379
-1a0aA00,1,LYS,1.3901875
-1a0aA00,2,ARG,1.2544051
-1a0aA00,3,GLU,1.0989321
-1a0aA00,4,SER,1.01632
-1a0aA00,5,HSD,0.873037
-1a0aA00,6,LYS,0.7593873
-1a0aA00,7,HSD,0.6777895
-1a0aA00,8,ALA,0.58092916
-
-===== FILE: ./outputs/RMSF/replicas/replica_1/450/rmsf_replica1_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.5921198
-1a0aA00,1,LYS,1.4617525
-1a0aA00,2,ARG,1.343816
-1a0aA00,3,GLU,1.2477936
-1a0aA00,4,SER,1.1704543
-1a0aA00,5,HSD,1.0975823
-1a0aA00,6,LYS,1.0598528
-1a0aA00,7,HSD,1.0091052
-1a0aA00,8,ALA,1.0253049
-
-===== FILE: ./outputs/RMSF/replicas/replica_1/379/rmsf_replica1_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.4234052
-1a0aA00,1,LYS,1.3028092
-1a0aA00,2,ARG,1.1737462
-1a0aA00,3,GLU,1.0883411
-1a0aA00,4,SER,1.0238752
-1a0aA00,5,HSD,0.9739617
-1a0aA00,6,LYS,0.9107688
-1a0aA00,7,HSD,0.850515
-1a0aA00,8,ALA,0.82572573
-
-===== FILE: ./outputs/RMSF/replicas/replica_1/348/rmsf_replica1_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.4276665
-1a0aA00,1,LYS,1.3018955
-1a0aA00,2,ARG,1.2027749
-1a0aA00,3,GLU,1.0919421
-1a0aA00,4,SER,1.0101075
-1a0aA00,5,HSD,0.94147146
-1a0aA00,6,LYS,0.8805832
-1a0aA00,7,HSD,0.8448707
-1a0aA00,8,ALA,0.83776975
-
-===== FILE: ./outputs/RMSF/replicas/replica_1/413/rmsf_replica1_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.5977552
-1a0aA00,1,LYS,1.4646237
-1a0aA00,2,ARG,1.3380047
-1a0aA00,3,GLU,1.2248296
-1a0aA00,4,SER,1.1503581
-1a0aA00,5,HSD,1.0700762
-1a0aA00,6,LYS,1.0123969
-1a0aA00,7,HSD,0.9607783
-1a0aA00,8,ALA,0.917867
-
-===== FILE: ./outputs/RMSF/replicas/replica_1/320/rmsf_replica1_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.3012784
-1a0aA00,1,LYS,1.114217
-1a0aA00,2,ARG,0.926238
-1a0aA00,3,GLU,0.80870616
-1a0aA00,4,SER,0.7295469
-1a0aA00,5,HSD,0.6783448
-1a0aA00,6,LYS,0.6098052
-1a0aA00,7,HSD,0.502893
-1a0aA00,8,ALA,0.48675847
-
-===== FILE: ./outputs/RMSF/replicas/replica_3/450/rmsf_replica3_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.5889727
-1a0aA00,1,LYS,1.4497886
-1a0aA00,2,ARG,1.3238894
-1a0aA00,3,GLU,1.2282224
-1a0aA00,4,SER,1.1614239
-1a0aA00,5,HSD,1.1063261
-1a0aA00,6,LYS,1.0692474
-1a0aA00,7,HSD,1.051364
-1a0aA00,8,ALA,1.0220671
-
-===== FILE: ./outputs/RMSF/replicas/replica_3/379/rmsf_replica3_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.3473746
-1a0aA00,1,LYS,1.2589906
-1a0aA00,2,ARG,1.1688836
-1a0aA00,3,GLU,1.0112096
-1a0aA00,4,SER,0.90419716
-1a0aA00,5,HSD,0.79281574
-1a0aA00,6,LYS,0.70222276
-1a0aA00,7,HSD,0.65354645
-1a0aA00,8,ALA,0.68198967
-
-===== FILE: ./outputs/RMSF/replicas/replica_3/348/rmsf_replica3_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.3683108
-1a0aA00,1,LYS,1.2340688
-1a0aA00,2,ARG,1.0977619
-1a0aA00,3,GLU,0.985331
-1a0aA00,4,SER,0.9125965
-1a0aA00,5,HSD,0.8901723
-1a0aA00,6,LYS,0.8536232
-1a0aA00,7,HSD,0.78431404
-1a0aA00,8,ALA,0.77752215
-
-===== FILE: ./outputs/RMSF/replicas/replica_3/413/rmsf_replica3_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.4518346
-1a0aA00,1,LYS,1.3167164
-1a0aA00,2,ARG,1.1783038
-1a0aA00,3,GLU,1.0581955
-1a0aA00,4,SER,0.99025
-1a0aA00,5,HSD,0.9618113
-1a0aA00,6,LYS,0.9475691
-1a0aA00,7,HSD,0.9393947
-1a0aA00,8,ALA,0.92429096
-
-===== FILE: ./outputs/RMSF/replicas/replica_3/320/rmsf_replica3_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.462561
-1a0aA00,1,LYS,1.3220783
-1a0aA00,2,ARG,1.1715425
-1a0aA00,3,GLU,1.0139415
-1a0aA00,4,SER,0.93468857
-1a0aA00,5,HSD,0.84040415
-1a0aA00,6,LYS,0.7781459
-1a0aA00,7,HSD,0.68806225
-1a0aA00,8,ALA,0.66684055
-
-===== FILE: ./outputs/RMSF/replica_average/450/rmsf_replica_average_temperature450.csv =====
-domain_id,resid,resname,rmsf_450
-1a0aA00,0,MET,1.5951369
-1a0aA00,1,LYS,1.4604483
-1a0aA00,2,ARG,1.3335836
-1a0aA00,3,GLU,1.2270706
-1a0aA00,4,SER,1.1463414
-1a0aA00,5,HSD,1.0700214
-1a0aA00,6,LYS,1.0232189
-1a0aA00,7,HSD,0.9782146
-1a0aA00,8,ALA,0.9594307
-
-===== FILE: ./outputs/RMSF/replica_average/379/rmsf_replica_average_temperature379.csv =====
-domain_id,resid,resname,rmsf_379
-1a0aA00,0,MET,1.4772995
-1a0aA00,1,LYS,1.3467977
-1a0aA00,2,ARG,1.2123555
-1a0aA00,3,GLU,1.0923307
-1a0aA00,4,SER,0.9989087
-1a0aA00,5,HSD,0.9201416
-1a0aA00,6,LYS,0.86415035
-1a0aA00,7,HSD,0.8167307
-1a0aA00,8,ALA,0.8115508
-
-===== FILE: ./outputs/RMSF/replica_average/348/rmsf_replica_average_temperature348.csv =====
-domain_id,resid,resname,rmsf_348
-1a0aA00,0,MET,1.4334629
-1a0aA00,1,LYS,1.2852292
-1a0aA00,2,ARG,1.1520655
-1a0aA00,3,GLU,1.0097101
-1a0aA00,4,SER,0.9123613
-1a0aA00,5,HSD,0.83743477
-1a0aA00,6,LYS,0.7914341
-1a0aA00,7,HSD,0.72878
-1a0aA00,8,ALA,0.7131204
-
-===== FILE: ./outputs/RMSF/replica_average/413/rmsf_replica_average_temperature413.csv =====
-domain_id,resid,resname,rmsf_413
-1a0aA00,0,MET,1.535583
-1a0aA00,1,LYS,1.3957214
-1a0aA00,2,ARG,1.2685184
-1a0aA00,3,GLU,1.1422019
-1a0aA00,4,SER,1.065963
-1a0aA00,5,HSD,1.0004411
-1a0aA00,6,LYS,0.96211654
-1a0aA00,7,HSD,0.92500556
-1a0aA00,8,ALA,0.90814066
-
-===== FILE: ./outputs/RMSF/replica_average/average/rmsf_all_temperatures_all_replicas.csv =====
-domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,rmsf_average
-1a0aA00,0,MET,1.3483024,1.4334629,1.4772995,1.535583,1.5951369,1.477957
-1a0aA00,1,LYS,1.1942909,1.2852292,1.3467977,1.3957214,1.4604483,1.3364975
-1a0aA00,2,ARG,1.0236586,1.1520655,1.2123555,1.2685184,1.3335836,1.1980364
-1a0aA00,3,GLU,0.88456726,1.0097101,1.0923307,1.1422019,1.2270706,1.0711762
-1a0aA00,4,SER,0.80763894,0.9123613,0.9989087,1.065963,1.1463414,0.98624265
-1a0aA00,5,HSD,0.727569,0.83743477,0.9201416,1.0004411,1.0700214,0.91112155
-1a0aA00,6,LYS,0.65099525,0.7914341,0.86415035,0.96211654,1.0232189,0.858383
-1a0aA00,7,HSD,0.57902086,0.72878,0.8167307,0.92500556,0.9782146,0.8055504
-1a0aA00,8,ALA,0.5618905,0.7131204,0.8115508,0.90814066,0.9594307,0.7908266
-
-===== FILE: ./outputs/RMSF/replica_average/320/rmsf_replica_average_temperature320.csv =====
-domain_id,resid,resname,rmsf_320
-1a0aA00,0,MET,1.3483024
-1a0aA00,1,LYS,1.1942909
-1a0aA00,2,ARG,1.0236586
-1a0aA00,3,GLU,0.88456726
-1a0aA00,4,SER,0.80763894
-1a0aA00,5,HSD,0.727569
-1a0aA00,6,LYS,0.65099525
-1a0aA00,7,HSD,0.57902086
-1a0aA00,8,ALA,0.5618905
-
-===== FILE: ./outputs/pdbs/1a0aA00.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     -13.223 -22.589  20.858  0.00  0.00           C  
-ATOM      2 HY1  MET A   0     -13.643 -23.328  21.385  0.00  0.00           H  
-ATOM      3 HY2  MET A   0     -13.780 -22.385  20.054  0.00  0.00           H  
-ATOM      4 HY3  MET A   0     -13.134 -21.772  21.428  0.00  0.00           H  
-ATOM      5 CY   MET A   0     -12.313 -22.879  20.560  0.00  0.00           C  
-ATOM      6 OY   MET A   0     -11.893 -22.140  20.033  0.00  0.00           O  
-ATOM      7 N    MET A   0     -12.141 -23.806  20.892  1.00  0.00           N  
-ATOM      8 HN   MET A   0     -12.561 -24.545  21.419  0.00  0.00           H  
-ATOM      9 CA   MET A   0     -10.786 -24.237  20.447  1.00  0.00           C  
-
-===== FILE: ./outputs/pdbs/1a02F00.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      16.299   1.661 -33.895  0.00  0.00           C  
-ATOM      2 HY1  ARG A 140      17.097   2.095 -33.477  0.00  0.00           H  
-ATOM      3 HY2  ARG A 140      15.484   1.847 -33.347  0.00  0.00           H  
-ATOM      4 HY3  ARG A 140      16.171   2.006 -34.825  0.00  0.00           H  
-ATOM      5 CY   ARG A 140      16.448   0.673 -33.933  0.00  0.00           C  
-ATOM      6 OY   ARG A 140      15.650   0.239 -34.350  0.00  0.00           O  
-ATOM      7 N    ARG A 140      17.343   0.463 -33.539  1.00  0.00           N  
-ATOM      8 HN   ARG A 140      18.141   0.897 -33.121  0.00  0.00           H  
-ATOM      9 CA   ARG A 140      17.565  -1.011 -33.595  1.00  0.00           C  
-
-===== FILE: ./outputs/frames/replica_2/450/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      38.150-224.830 126.690  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      38.150-224.830 126.690  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      38.150-224.830 126.690  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      38.150-224.830 126.690  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      38.150-224.830 126.690  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      38.150-224.830 126.690  0.00  0.00            O  
-ATOM      7 N    ARG A 140      38.150-224.830 126.690  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      38.150-224.830 126.690  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      38.150-224.830 126.690  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/450/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      49.450   9.460 145.460  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      49.450   9.460 145.460  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      49.450   9.460 145.460  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      49.450   9.460 145.460  0.00  0.00            H  
-ATOM      5 CY   MET A   0      49.450   9.460 145.460  0.00  0.00            C  
-ATOM      6 OY   MET A   0      49.450   9.460 145.460  0.00  0.00            O  
-ATOM      7 N    MET A   0      49.450   9.460 145.460  1.00  0.00            N  
-ATOM      8 HN   MET A   0      49.450   9.460 145.460  0.00  0.00            H  
-ATOM      9 CA   MET A   0      49.450   9.460 145.460  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/379/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      76.490  98.920 145.990  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      76.490  98.920 145.990  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      76.490  98.920 145.990  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      76.490  98.920 145.990  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      76.490  98.920 145.990  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      76.490  98.920 145.990  0.00  0.00            O  
-ATOM      7 N    ARG A 140      76.490  98.920 145.990  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      76.490  98.920 145.990  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      76.490  98.920 145.990  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/379/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     105.530 164.810 -14.970  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     105.530 164.810 -14.970  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     105.530 164.810 -14.970  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     105.530 164.810 -14.970  0.00  0.00            H  
-ATOM      5 CY   MET A   0     105.530 164.810 -14.970  0.00  0.00            C  
-ATOM      6 OY   MET A   0     105.530 164.810 -14.970  0.00  0.00            O  
-ATOM      7 N    MET A   0     105.530 164.810 -14.970  1.00  0.00            N  
-ATOM      8 HN   MET A   0     105.530 164.810 -14.970  0.00  0.00            H  
-ATOM      9 CA   MET A   0     105.530 164.810 -14.970  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/348/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     114.820  94.070 -38.730  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     114.820  94.070 -38.730  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     114.820  94.070 -38.730  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     114.820  94.070 -38.730  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     114.820  94.070 -38.730  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     114.820  94.070 -38.730  0.00  0.00            O  
-ATOM      7 N    ARG A 140     114.820  94.070 -38.730  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     114.820  94.070 -38.730  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     114.820  94.070 -38.730  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/348/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      -6.600 -69.240 106.550  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      -6.600 -69.240 106.550  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      -6.600 -69.240 106.550  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      -6.600 -69.240 106.550  0.00  0.00            H  
-ATOM      5 CY   MET A   0      -6.600 -69.240 106.550  0.00  0.00            C  
-ATOM      6 OY   MET A   0      -6.600 -69.240 106.550  0.00  0.00            O  
-ATOM      7 N    MET A   0      -6.600 -69.240 106.550  1.00  0.00            N  
-ATOM      8 HN   MET A   0      -6.600 -69.240 106.550  0.00  0.00            H  
-ATOM      9 CA   MET A   0      -6.600 -69.240 106.550  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/413/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     358.730 -67.080 192.100  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     358.730 -67.080 192.100  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     358.730 -67.080 192.100  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     358.730 -67.080 192.100  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     358.730 -67.080 192.100  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     358.730 -67.080 192.100  0.00  0.00            O  
-ATOM      7 N    ARG A 140     358.730 -67.080 192.100  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     358.730 -67.080 192.100  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     358.730 -67.080 192.100  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/413/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     -35.500 -23.390  26.430  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     -35.500 -23.390  26.430  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     -35.500 -23.390  26.430  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     -35.500 -23.390  26.430  0.00  0.00            H  
-ATOM      5 CY   MET A   0     -35.500 -23.390  26.430  0.00  0.00            C  
-ATOM      6 OY   MET A   0     -35.500 -23.390  26.430  0.00  0.00            O  
-ATOM      7 N    MET A   0     -35.500 -23.390  26.430  1.00  0.00            N  
-ATOM      8 HN   MET A   0     -35.500 -23.390  26.430  0.00  0.00            H  
-ATOM      9 CA   MET A   0     -35.500 -23.390  26.430  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/320/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     351.100 -37.860 224.700  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     351.100 -37.860 224.700  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     351.100 -37.860 224.700  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     351.100 -37.860 224.700  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     351.100 -37.860 224.700  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     351.100 -37.860 224.700  0.00  0.00            O  
-ATOM      7 N    ARG A 140     351.100 -37.860 224.700  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     351.100 -37.860 224.700  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     351.100 -37.860 224.700  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_2/320/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     -70.770 142.130 -99.930  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     -70.770 142.130 -99.930  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     -70.770 142.130 -99.930  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     -70.770 142.130 -99.930  0.00  0.00            H  
-ATOM      5 CY   MET A   0     -70.770 142.130 -99.930  0.00  0.00            C  
-ATOM      6 OY   MET A   0     -70.770 142.130 -99.930  0.00  0.00            O  
-ATOM      7 N    MET A   0     -70.770 142.130 -99.930  1.00  0.00            N  
-ATOM      8 HN   MET A   0     -70.770 142.130 -99.930  0.00  0.00            H  
-ATOM      9 CA   MET A   0     -70.770 142.130 -99.930  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/450/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140    -115.450 208.680 -52.340  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140    -115.450 208.680 -52.340  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140    -115.450 208.680 -52.340  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140    -115.450 208.680 -52.340  0.00  0.00            H  
-ATOM      5 CY   ARG A 140    -115.450 208.680 -52.340  0.00  0.00            C  
-ATOM      6 OY   ARG A 140    -115.450 208.680 -52.340  0.00  0.00            O  
-ATOM      7 N    ARG A 140    -115.450 208.680 -52.340  1.00  0.00            N  
-ATOM      8 HN   ARG A 140    -115.450 208.680 -52.340  0.00  0.00            H  
-ATOM      9 CA   ARG A 140    -115.450 208.680 -52.340  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/450/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      80.350-105.930-213.540  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      80.350-105.930-213.540  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      80.350-105.930-213.540  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      80.350-105.930-213.540  0.00  0.00            H  
-ATOM      5 CY   MET A   0      80.350-105.930-213.540  0.00  0.00            C  
-ATOM      6 OY   MET A   0      80.350-105.930-213.540  0.00  0.00            O  
-ATOM      7 N    MET A   0      80.350-105.930-213.540  1.00  0.00            N  
-ATOM      8 HN   MET A   0      80.350-105.930-213.540  0.00  0.00            H  
-ATOM      9 CA   MET A   0      80.350-105.930-213.540  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/379/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      25.150 338.900 229.660  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      25.150 338.900 229.660  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      25.150 338.900 229.660  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      25.150 338.900 229.660  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      25.150 338.900 229.660  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      25.150 338.900 229.660  0.00  0.00            O  
-ATOM      7 N    ARG A 140      25.150 338.900 229.660  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      25.150 338.900 229.660  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      25.150 338.900 229.660  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/379/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0    -117.290  32.370-268.500  0.00  0.00            C  
-ATOM      2 HY1  MET A   0    -117.290  32.370-268.500  0.00  0.00            H  
-ATOM      3 HY2  MET A   0    -117.290  32.370-268.500  0.00  0.00            H  
-ATOM      4 HY3  MET A   0    -117.290  32.370-268.500  0.00  0.00            H  
-ATOM      5 CY   MET A   0    -117.290  32.370-268.500  0.00  0.00            C  
-ATOM      6 OY   MET A   0    -117.290  32.370-268.500  0.00  0.00            O  
-ATOM      7 N    MET A   0    -117.290  32.370-268.500  1.00  0.00            N  
-ATOM      8 HN   MET A   0    -117.290  32.370-268.500  0.00  0.00            H  
-ATOM      9 CA   MET A   0    -117.290  32.370-268.500  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/348/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      18.870  56.840 270.850  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      18.870  56.840 270.850  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      18.870  56.840 270.850  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      18.870  56.840 270.850  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      18.870  56.840 270.850  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      18.870  56.840 270.850  0.00  0.00            O  
-ATOM      7 N    ARG A 140      18.870  56.840 270.850  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      18.870  56.840 270.850  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      18.870  56.840 270.850  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/348/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     157.580 106.370 185.640  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     157.580 106.370 185.640  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     157.580 106.370 185.640  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     157.580 106.370 185.640  0.00  0.00            H  
-ATOM      5 CY   MET A   0     157.580 106.370 185.640  0.00  0.00            C  
-ATOM      6 OY   MET A   0     157.580 106.370 185.640  0.00  0.00            O  
-ATOM      7 N    MET A   0     157.580 106.370 185.640  1.00  0.00            N  
-ATOM      8 HN   MET A   0     157.580 106.370 185.640  0.00  0.00            H  
-ATOM      9 CA   MET A   0     157.580 106.370 185.640  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/413/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -54.000 -56.960  55.780  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -54.000 -56.960  55.780  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -54.000 -56.960  55.780  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -54.000 -56.960  55.780  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -54.000 -56.960  55.780  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -54.000 -56.960  55.780  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -54.000 -56.960  55.780  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -54.000 -56.960  55.780  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -54.000 -56.960  55.780  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/413/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      -2.040  39.200  90.030  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      -2.040  39.200  90.030  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      -2.040  39.200  90.030  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      -2.040  39.200  90.030  0.00  0.00            H  
-ATOM      5 CY   MET A   0      -2.040  39.200  90.030  0.00  0.00            C  
-ATOM      6 OY   MET A   0      -2.040  39.200  90.030  0.00  0.00            O  
-ATOM      7 N    MET A   0      -2.040  39.200  90.030  1.00  0.00            N  
-ATOM      8 HN   MET A   0      -2.040  39.200  90.030  0.00  0.00            H  
-ATOM      9 CA   MET A   0      -2.040  39.200  90.030  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/320/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140       7.090-117.960  45.340  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140       7.090-117.960  45.340  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140       7.090-117.960  45.340  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140       7.090-117.960  45.340  0.00  0.00            H  
-ATOM      5 CY   ARG A 140       7.090-117.960  45.340  0.00  0.00            C  
-ATOM      6 OY   ARG A 140       7.090-117.960  45.340  0.00  0.00            O  
-ATOM      7 N    ARG A 140       7.090-117.960  45.340  1.00  0.00            N  
-ATOM      8 HN   ARG A 140       7.090-117.960  45.340  0.00  0.00            H  
-ATOM      9 CA   ARG A 140       7.090-117.960  45.340  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_4/320/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     126.180  28.310 -31.350  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     126.180  28.310 -31.350  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     126.180  28.310 -31.350  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     126.180  28.310 -31.350  0.00  0.00            H  
-ATOM      5 CY   MET A   0     126.180  28.310 -31.350  0.00  0.00            C  
-ATOM      6 OY   MET A   0     126.180  28.310 -31.350  0.00  0.00            O  
-ATOM      7 N    MET A   0     126.180  28.310 -31.350  1.00  0.00            N  
-ATOM      8 HN   MET A   0     126.180  28.310 -31.350  0.00  0.00            H  
-ATOM      9 CA   MET A   0     126.180  28.310 -31.350  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/450/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     119.490  53.590 205.540  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     119.490  53.590 205.540  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     119.490  53.590 205.540  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     119.490  53.590 205.540  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     119.490  53.590 205.540  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     119.490  53.590 205.540  0.00  0.00            O  
-ATOM      7 N    ARG A 140     119.490  53.590 205.540  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     119.490  53.590 205.540  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     119.490  53.590 205.540  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/450/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     277.330 -46.270  -6.970  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     277.330 -46.270  -6.970  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     277.330 -46.270  -6.970  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     277.330 -46.270  -6.970  0.00  0.00            H  
-ATOM      5 CY   MET A   0     277.330 -46.270  -6.970  0.00  0.00            C  
-ATOM      6 OY   MET A   0     277.330 -46.270  -6.970  0.00  0.00            O  
-ATOM      7 N    MET A   0     277.330 -46.270  -6.970  1.00  0.00            N  
-ATOM      8 HN   MET A   0     277.330 -46.270  -6.970  0.00  0.00            H  
-ATOM      9 CA   MET A   0     277.330 -46.270  -6.970  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/379/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     286.190  53.910-119.060  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     286.190  53.910-119.060  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     286.190  53.910-119.060  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     286.190  53.910-119.060  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     286.190  53.910-119.060  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     286.190  53.910-119.060  0.00  0.00            O  
-ATOM      7 N    ARG A 140     286.190  53.910-119.060  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     286.190  53.910-119.060  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     286.190  53.910-119.060  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/379/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     115.500  -7.610-138.030  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     115.500  -7.610-138.030  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     115.500  -7.610-138.030  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     115.500  -7.610-138.030  0.00  0.00            H  
-ATOM      5 CY   MET A   0     115.500  -7.610-138.030  0.00  0.00            C  
-ATOM      6 OY   MET A   0     115.500  -7.610-138.030  0.00  0.00            O  
-ATOM      7 N    MET A   0     115.500  -7.610-138.030  1.00  0.00            N  
-ATOM      8 HN   MET A   0     115.500  -7.610-138.030  0.00  0.00            H  
-ATOM      9 CA   MET A   0     115.500  -7.610-138.030  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/348/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140       7.010 158.680 111.020  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140       7.010 158.680 111.020  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140       7.010 158.680 111.020  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140       7.010 158.680 111.020  0.00  0.00            H  
-ATOM      5 CY   ARG A 140       7.010 158.680 111.020  0.00  0.00            C  
-ATOM      6 OY   ARG A 140       7.010 158.680 111.020  0.00  0.00            O  
-ATOM      7 N    ARG A 140       7.010 158.680 111.020  1.00  0.00            N  
-ATOM      8 HN   ARG A 140       7.010 158.680 111.020  0.00  0.00            H  
-ATOM      9 CA   ARG A 140       7.010 158.680 111.020  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/348/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     204.940  27.560  92.320  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     204.940  27.560  92.320  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     204.940  27.560  92.320  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     204.940  27.560  92.320  0.00  0.00            H  
-ATOM      5 CY   MET A   0     204.940  27.560  92.320  0.00  0.00            C  
-ATOM      6 OY   MET A   0     204.940  27.560  92.320  0.00  0.00            O  
-ATOM      7 N    MET A   0     204.940  27.560  92.320  1.00  0.00            N  
-ATOM      8 HN   MET A   0     204.940  27.560  92.320  0.00  0.00            H  
-ATOM      9 CA   MET A   0     204.940  27.560  92.320  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/413/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      45.730 114.660-103.630  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      45.730 114.660-103.630  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      45.730 114.660-103.630  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      45.730 114.660-103.630  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      45.730 114.660-103.630  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      45.730 114.660-103.630  0.00  0.00            O  
-ATOM      7 N    ARG A 140      45.730 114.660-103.630  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      45.730 114.660-103.630  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      45.730 114.660-103.630  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/413/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     131.150 -26.510 -96.150  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     131.150 -26.510 -96.150  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     131.150 -26.510 -96.150  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     131.150 -26.510 -96.150  0.00  0.00            H  
-ATOM      5 CY   MET A   0     131.150 -26.510 -96.150  0.00  0.00            C  
-ATOM      6 OY   MET A   0     131.150 -26.510 -96.150  0.00  0.00            O  
-ATOM      7 N    MET A   0     131.150 -26.510 -96.150  1.00  0.00            N  
-ATOM      8 HN   MET A   0     131.150 -26.510 -96.150  0.00  0.00            H  
-ATOM      9 CA   MET A   0     131.150 -26.510 -96.150  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/320/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     180.840 -42.240  96.420  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     180.840 -42.240  96.420  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     180.840 -42.240  96.420  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     180.840 -42.240  96.420  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     180.840 -42.240  96.420  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     180.840 -42.240  96.420  0.00  0.00            O  
-ATOM      7 N    ARG A 140     180.840 -42.240  96.420  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     180.840 -42.240  96.420  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     180.840 -42.240  96.420  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_0/320/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     195.640  59.670-110.600  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     195.640  59.670-110.600  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     195.640  59.670-110.600  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     195.640  59.670-110.600  0.00  0.00            H  
-ATOM      5 CY   MET A   0     195.640  59.670-110.600  0.00  0.00            C  
-ATOM      6 OY   MET A   0     195.640  59.670-110.600  0.00  0.00            O  
-ATOM      7 N    MET A   0     195.640  59.670-110.600  1.00  0.00            N  
-ATOM      8 HN   MET A   0     195.640  59.670-110.600  0.00  0.00            H  
-ATOM      9 CA   MET A   0     195.640  59.670-110.600  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/450/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      36.020 -76.710-109.780  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      36.020 -76.710-109.780  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      36.020 -76.710-109.780  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      36.020 -76.710-109.780  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      36.020 -76.710-109.780  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      36.020 -76.710-109.780  0.00  0.00            O  
-ATOM      7 N    ARG A 140      36.020 -76.710-109.780  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      36.020 -76.710-109.780  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      36.020 -76.710-109.780  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/450/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     300.360 -39.740 140.290  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     300.360 -39.740 140.290  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     300.360 -39.740 140.290  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     300.360 -39.740 140.290  0.00  0.00            H  
-ATOM      5 CY   MET A   0     300.360 -39.740 140.290  0.00  0.00            C  
-ATOM      6 OY   MET A   0     300.360 -39.740 140.290  0.00  0.00            O  
-ATOM      7 N    MET A   0     300.360 -39.740 140.290  1.00  0.00            N  
-ATOM      8 HN   MET A   0     300.360 -39.740 140.290  0.00  0.00            H  
-ATOM      9 CA   MET A   0     300.360 -39.740 140.290  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/379/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      32.830-100.760  97.990  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      32.830-100.760  97.990  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      32.830-100.760  97.990  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      32.830-100.760  97.990  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      32.830-100.760  97.990  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      32.830-100.760  97.990  0.00  0.00            O  
-ATOM      7 N    ARG A 140      32.830-100.760  97.990  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      32.830-100.760  97.990  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      32.830-100.760  97.990  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/379/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      40.420   9.130 254.430  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      40.420   9.130 254.430  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      40.420   9.130 254.430  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      40.420   9.130 254.430  0.00  0.00            H  
-ATOM      5 CY   MET A   0      40.420   9.130 254.430  0.00  0.00            C  
-ATOM      6 OY   MET A   0      40.420   9.130 254.430  0.00  0.00            O  
-ATOM      7 N    MET A   0      40.420   9.130 254.430  1.00  0.00            N  
-ATOM      8 HN   MET A   0      40.420   9.130 254.430  0.00  0.00            H  
-ATOM      9 CA   MET A   0      40.420   9.130 254.430  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/348/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      92.600 -51.830  88.910  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      92.600 -51.830  88.910  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      92.600 -51.830  88.910  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      92.600 -51.830  88.910  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      92.600 -51.830  88.910  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      92.600 -51.830  88.910  0.00  0.00            O  
-ATOM      7 N    ARG A 140      92.600 -51.830  88.910  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      92.600 -51.830  88.910  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      92.600 -51.830  88.910  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/348/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      -1.820 -48.950  94.020  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      -1.820 -48.950  94.020  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      -1.820 -48.950  94.020  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      -1.820 -48.950  94.020  0.00  0.00            H  
-ATOM      5 CY   MET A   0      -1.820 -48.950  94.020  0.00  0.00            C  
-ATOM      6 OY   MET A   0      -1.820 -48.950  94.020  0.00  0.00            O  
-ATOM      7 N    MET A   0      -1.820 -48.950  94.020  1.00  0.00            N  
-ATOM      8 HN   MET A   0      -1.820 -48.950  94.020  0.00  0.00            H  
-ATOM      9 CA   MET A   0      -1.820 -48.950  94.020  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/413/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140      37.560  98.880 236.320  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140      37.560  98.880 236.320  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140      37.560  98.880 236.320  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140      37.560  98.880 236.320  0.00  0.00            H  
-ATOM      5 CY   ARG A 140      37.560  98.880 236.320  0.00  0.00            C  
-ATOM      6 OY   ARG A 140      37.560  98.880 236.320  0.00  0.00            O  
-ATOM      7 N    ARG A 140      37.560  98.880 236.320  1.00  0.00            N  
-ATOM      8 HN   ARG A 140      37.560  98.880 236.320  0.00  0.00            H  
-ATOM      9 CA   ARG A 140      37.560  98.880 236.320  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/413/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      35.810 -78.840 -40.590  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      35.810 -78.840 -40.590  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      35.810 -78.840 -40.590  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      35.810 -78.840 -40.590  0.00  0.00            H  
-ATOM      5 CY   MET A   0      35.810 -78.840 -40.590  0.00  0.00            C  
-ATOM      6 OY   MET A   0      35.810 -78.840 -40.590  0.00  0.00            O  
-ATOM      7 N    MET A   0      35.810 -78.840 -40.590  1.00  0.00            N  
-ATOM      8 HN   MET A   0      35.810 -78.840 -40.590  0.00  0.00            H  
-ATOM      9 CA   MET A   0      35.810 -78.840 -40.590  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/320/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -33.380 139.920 -25.280  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -33.380 139.920 -25.280  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -33.380 139.920 -25.280  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -33.380 139.920 -25.280  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -33.380 139.920 -25.280  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -33.380 139.920 -25.280  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -33.380 139.920 -25.280  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -33.380 139.920 -25.280  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -33.380 139.920 -25.280  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_1/320/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      35.600  56.340 -21.860  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      35.600  56.340 -21.860  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      35.600  56.340 -21.860  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      35.600  56.340 -21.860  0.00  0.00            H  
-ATOM      5 CY   MET A   0      35.600  56.340 -21.860  0.00  0.00            C  
-ATOM      6 OY   MET A   0      35.600  56.340 -21.860  0.00  0.00            O  
-ATOM      7 N    MET A   0      35.600  56.340 -21.860  1.00  0.00            N  
-ATOM      8 HN   MET A   0      35.600  56.340 -21.860  0.00  0.00            H  
-ATOM      9 CA   MET A   0      35.600  56.340 -21.860  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/450/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -31.150 226.830   2.110  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -31.150 226.830   2.110  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -31.150 226.830   2.110  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -31.150 226.830   2.110  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -31.150 226.830   2.110  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -31.150 226.830   2.110  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -31.150 226.830   2.110  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -31.150 226.830   2.110  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -31.150 226.830   2.110  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/450/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      59.180 112.900  98.670  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      59.180 112.900  98.670  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      59.180 112.900  98.670  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      59.180 112.900  98.670  0.00  0.00            H  
-ATOM      5 CY   MET A   0      59.180 112.900  98.670  0.00  0.00            C  
-ATOM      6 OY   MET A   0      59.180 112.900  98.670  0.00  0.00            O  
-ATOM      7 N    MET A   0      59.180 112.900  98.670  1.00  0.00            N  
-ATOM      8 HN   MET A   0      59.180 112.900  98.670  0.00  0.00            H  
-ATOM      9 CA   MET A   0      59.180 112.900  98.670  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/379/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -15.060  74.050  87.110  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -15.060  74.050  87.110  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -15.060  74.050  87.110  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -15.060  74.050  87.110  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -15.060  74.050  87.110  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -15.060  74.050  87.110  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -15.060  74.050  87.110  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -15.060  74.050  87.110  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -15.060  74.050  87.110  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/379/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     282.160  11.220-202.430  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     282.160  11.220-202.430  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     282.160  11.220-202.430  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     282.160  11.220-202.430  0.00  0.00            H  
-ATOM      5 CY   MET A   0     282.160  11.220-202.430  0.00  0.00            C  
-ATOM      6 OY   MET A   0     282.160  11.220-202.430  0.00  0.00            O  
-ATOM      7 N    MET A   0     282.160  11.220-202.430  1.00  0.00            N  
-ATOM      8 HN   MET A   0     282.160  11.220-202.430  0.00  0.00            H  
-ATOM      9 CA   MET A   0     282.160  11.220-202.430  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/348/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     150.710  13.520  48.820  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     150.710  13.520  48.820  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     150.710  13.520  48.820  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     150.710  13.520  48.820  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     150.710  13.520  48.820  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     150.710  13.520  48.820  0.00  0.00            O  
-ATOM      7 N    ARG A 140     150.710  13.520  48.820  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     150.710  13.520  48.820  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     150.710  13.520  48.820  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/348/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0      55.400-148.450  42.270  0.00  0.00            C  
-ATOM      2 HY1  MET A   0      55.400-148.450  42.270  0.00  0.00            H  
-ATOM      3 HY2  MET A   0      55.400-148.450  42.270  0.00  0.00            H  
-ATOM      4 HY3  MET A   0      55.400-148.450  42.270  0.00  0.00            H  
-ATOM      5 CY   MET A   0      55.400-148.450  42.270  0.00  0.00            C  
-ATOM      6 OY   MET A   0      55.400-148.450  42.270  0.00  0.00            O  
-ATOM      7 N    MET A   0      55.400-148.450  42.270  1.00  0.00            N  
-ATOM      8 HN   MET A   0      55.400-148.450  42.270  0.00  0.00            H  
-ATOM      9 CA   MET A   0      55.400-148.450  42.270  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/413/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -60.170-126.820 224.170  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -60.170-126.820 224.170  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -60.170-126.820 224.170  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -60.170-126.820 224.170  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -60.170-126.820 224.170  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -60.170-126.820 224.170  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -60.170-126.820 224.170  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -60.170-126.820 224.170  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -60.170-126.820 224.170  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/413/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0     510.430 -78.580 -88.660  0.00  0.00            C  
-ATOM      2 HY1  MET A   0     510.430 -78.580 -88.660  0.00  0.00            H  
-ATOM      3 HY2  MET A   0     510.430 -78.580 -88.660  0.00  0.00            H  
-ATOM      4 HY3  MET A   0     510.430 -78.580 -88.660  0.00  0.00            H  
-ATOM      5 CY   MET A   0     510.430 -78.580 -88.660  0.00  0.00            C  
-ATOM      6 OY   MET A   0     510.430 -78.580 -88.660  0.00  0.00            O  
-ATOM      7 N    MET A   0     510.430 -78.580 -88.660  1.00  0.00            N  
-ATOM      8 HN   MET A   0     510.430 -78.580 -88.660  0.00  0.00            H  
-ATOM      9 CA   MET A   0     510.430 -78.580 -88.660  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/320/1a02F00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    ARG A 140     -14.750 194.240 -36.580  0.00  0.00            C  
-ATOM      2 HY1  ARG A 140     -14.750 194.240 -36.580  0.00  0.00            H  
-ATOM      3 HY2  ARG A 140     -14.750 194.240 -36.580  0.00  0.00            H  
-ATOM      4 HY3  ARG A 140     -14.750 194.240 -36.580  0.00  0.00            H  
-ATOM      5 CY   ARG A 140     -14.750 194.240 -36.580  0.00  0.00            C  
-ATOM      6 OY   ARG A 140     -14.750 194.240 -36.580  0.00  0.00            O  
-ATOM      7 N    ARG A 140     -14.750 194.240 -36.580  1.00  0.00            N  
-ATOM      8 HN   ARG A 140     -14.750 194.240 -36.580  0.00  0.00            H  
-ATOM      9 CA   ARG A 140     -14.750 194.240 -36.580  1.00  0.00            C  
-
-===== FILE: ./outputs/frames/replica_3/320/1a0aA00_frame.pdb =====
-CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
-ATOM      1 N    MET A   0       1.320  70.200 131.660  0.00  0.00            C  
-ATOM      2 HY1  MET A   0       1.320  70.200 131.660  0.00  0.00            H  
-ATOM      3 HY2  MET A   0       1.320  70.200 131.660  0.00  0.00            H  
-ATOM      4 HY3  MET A   0       1.320  70.200 131.660  0.00  0.00            H  
-ATOM      5 CY   MET A   0       1.320  70.200 131.660  0.00  0.00            C  
-ATOM      6 OY   MET A   0       1.320  70.200 131.660  0.00  0.00            O  
-ATOM      7 N    MET A   0       1.320  70.200 131.660  1.00  0.00            N  
-ATOM      8 HN   MET A   0       1.320  70.200 131.660  0.00  0.00            H  
-ATOM      9 CA   MET A   0       1.320  70.200 131.660  1.00  0.00            C  
 
 ===== FILE: ./src/mdcath.egg-info/SOURCES.txt =====
 LICENSE
@@ -5061,14 +3911,14 @@ import matplotlib.pyplot as plt
 ===== FILE: ./src/mdcath/config/default_config.yaml =====
 input:
   mdcath_folder: "/mnt/datasets/MD_CATH/data"  # Path to the mdCATH folder
-  domain_ids: ["1a02F00", "1a0aA00"]   # Empty means process default domain (12asA00)
-
-temperatures: [320, 348, 379, 413, 450]
-num_replicas: 5  # Number of replicas to process per temperature
-
-output:
-  base_dir: "./outputs"
-
+  domain_ids: [
+    "12asA00",
+    "153lA00",
+    "16pkA02",
+    "1a02F00",
+    "1a05A00",
+    "1a0aA00",
+    "1a0hA01",
 
 ===== FILE: ./src/mdcath/config/__init__.py =====
 """
@@ -5124,16 +3974,16 @@ import sys
 import h5py
 
 ===== FILE: ./README.md =====
-# mdCATH Dataset Processing Project for RMSF Prediction
+# 🧪 mdCATH Dataset Processor
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![BioMolecular Analysis](https://img.shields.io/badge/Biomolecular-Analysis-green.svg)](https://github.com/yourusername/mdcath-processor)
+[![Protein Dynamics](https://img.shields.io/badge/Protein-Dynamics-red.svg)](https://github.com/yourusername/mdcath-processor)
 
-This project provides a comprehensive data processing pipeline for the mdCATH protein dynamics dataset. It extracts, transforms, and organizes the data into formats optimized for training machine learning models that predict Root Mean Square Fluctuation (RMSF) from protein structure information.
+A comprehensive suite for processing mdCATH protein dynamics dataset to facilitate machine learning-based prediction of Root Mean Square Fluctuation (RMSF) from protein structures.
 
-The resulting datasets enable the development of ML architectures that can accurately predict protein dynamics from structural features.
-
-## Features
-
+---
 
 ===== FILE: ./requirements.txt =====
 h5py>=3.1.0
