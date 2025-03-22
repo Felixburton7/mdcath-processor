@@ -170,31 +170,26 @@ graph TD
     A[mdCATH H5 Files] --> B[Data Extraction]
     B --> C1[PDB Data]
     B --> C2[RMSF Data]
-    B --> C3[DSSP Data]
     B --> C4[Coordinate Data]
     
     C1 --> D1[PDB Processing]
     D1 --> E1[Cleaned PDB Files]
     E1 --> F1[Core/Exterior Classification]
-    E1 --> F2[Frame Extraction]
+    E1 --> D3[DSSP Processing]
     
     C2 --> D2[RMSF Analysis]
     D2 --> E2[Replica-level RMSF]
     E2 --> F3[Temperature-averaged RMSF]
     
-    C3 --> D3[DSSP Processing]
-    C4 --> D4[Coordinate Processing]
-    D4 --> F2
+    C4 --> F2[Frame Extraction]
     
     F1 --> G[Feature Generation]
     F2 --> H[Voxelization]
     F3 --> G
     D3 --> G
     
+    H --> G
     G --> I[ML-Ready Datasets]
-    H --> J[Voxelized Representations]
-    
-    I --> K[Visualizations]
 ```
 
 ### Detailed Process Flow:
