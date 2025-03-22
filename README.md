@@ -389,43 +389,204 @@ The mdCATH processor generates multiple structured outputs for analysis and mode
 
 ### 1. RMSF Analysis Results
 
-**File: `outputs/RMSF/replica_average/average/rmsf_all_temperatures_all_replicas.csv`**
+<table>
+<tr><th colspan="8" style="text-align:left; background-color:#f0f7ff; padding:10px;">
+<b>File:</b> <code>outputs/RMSF/replica_average/average/rmsf_all_temperatures_all_replicas.csv</code>
+</th></tr>
+<tr style="background-color:#f8f9fa;">
+<th>domain_id</th>
+<th>resid</th>
+<th>resname</th>
+<th>rmsf_320</th>
+<th>rmsf_348</th>
+<th>rmsf_379</th>
+<th>rmsf_413</th>
+<th>rmsf_450</th>
+<th>rmsf_average</th>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>1</td>
+<td>MET</td>
+<td>1.243</td>
+<td>1.321</td>
+<td>1.467</td>
+<td>1.589</td>
+<td>1.723</td>
+<td><b>1.469</b></td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td>12asA00</td>
+<td>2</td>
+<td>LYS</td>
+<td>1.103</td>
+<td>1.174</td>
+<td>1.256</td>
+<td>1.392</td>
+<td>1.532</td>
+<td><b>1.291</b></td>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>3</td>
+<td>ILE</td>
+<td>0.936</td>
+<td>0.987</td>
+<td>1.075</td>
+<td>1.156</td>
+<td>1.267</td>
+<td><b>1.084</b></td>
+</tr>
+</table>
 
-```csv
-domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,rmsf_average
-12asA00,1,MET,1.243,1.321,1.467,1.589,1.723,1.469
-12asA00,2,LYS,1.103,1.174,1.256,1.392,1.532,1.291
-12asA00,3,ILE,0.936,0.987,1.075,1.156,1.267,1.084
-```
-
-This file contains average RMSF values across replicas and temperatures for each residue, providing a comprehensive view of protein flexibility.
+This file contains average RMSF values across replicas and temperatures for each residue, providing a comprehensive view of protein flexibility. The data shows how flexibility increases with temperature and the average across all conditions.
 
 ### 2. ML-Ready Feature Datasets
 
-**File: `outputs/ML_features/final_dataset_temperature_average.csv`**
+<table>
+<tr><th colspan="18" style="text-align:left; background-color:#f0fff7; padding:10px;">
+<b>File:</b> <code>outputs/ML_features/final_dataset_temperature_average.csv</code>
+</th></tr>
+<tr style="background-color:#f8f9fa; font-size:0.9em;">
+<th>domain_id</th>
+<th>resid</th>
+<th>resname</th>
+<th>rmsf_320</th>
+<th>rmsf_348</th>
+<th>rmsf_379</th>
+<th>rmsf_413</th>
+<th>rmsf_450</th>
+<th>protein_size</th>
+<th>normalized_resid</th>
+<th>core_exterior</th>
+<th>rel_access</th>
+<th>dssp</th>
+<th>resname_enc</th>
+<th>core_ext_enc</th>
+<th>sec_struct_enc</th>
+<th>phi_norm</th>
+<th>psi_norm</th>
+<th>rmsf_avg</th>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>1</td>
+<td>MET</td>
+<td>1.243</td>
+<td>1.321</td>
+<td>1.467</td>
+<td>1.589</td>
+<td>1.723</td>
+<td>330</td>
+<td>0.000</td>
+<td>exterior</td>
+<td>0.85</td>
+<td>C</td>
+<td>13</td>
+<td>1</td>
+<td>2</td>
+<td>0.00</td>
+<td>0.00</td>
+<td><b>1.469</b></td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td>12asA00</td>
+<td>2</td>
+<td>LYS</td>
+<td>1.103</td>
+<td>1.174</td>
+<td>1.256</td>
+<td>1.392</td>
+<td>1.532</td>
+<td>330</td>
+<td>0.003</td>
+<td>exterior</td>
+<td>0.63</td>
+<td>T</td>
+<td>12</td>
+<td>1</td>
+<td>2</td>
+<td>-0.42</td>
+<td>0.33</td>
+<td><b>1.291</b></td>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>3</td>
+<td>ILE</td>
+<td>0.936</td>
+<td>0.987</td>
+<td>1.075</td>
+<td>1.156</td>
+<td>1.267</td>
+<td>330</td>
+<td>0.006</td>
+<td>core</td>
+<td>0.15</td>
+<td>E</td>
+<td>9</td>
+<td>0</td>
+<td>1</td>
+<td>-0.41</td>
+<td>-0.75</td>
+<td><b>1.084</b></td>
+</tr>
+</table>
 
-```csv
-domain_id,resid,resname,rmsf_320,rmsf_348,rmsf_379,rmsf_413,rmsf_450,protein_size,normalized_resid,core_exterior,relative_accessibility,dssp,resname_encoded,core_exterior_encoded,secondary_structure_encoded,phi_norm,psi_norm,rmsf_average
-12asA00,1,MET,1.243,1.321,1.467,1.589,1.723,330,0.000,exterior,0.85,C,13,1,2,0.00,0.00,1.469
-12asA00,2,LYS,1.103,1.174,1.256,1.392,1.532,330,0.003,exterior,0.63,T,12,1,2,-0.42,0.33,1.291
-12asA00,3,ILE,0.936,0.987,1.075,1.156,1.267,330,0.006,core,0.15,E,9,0,1,-0.41,-0.75,1.084
-```
-
-This comprehensive dataset combines RMSF values with structural features:
-- Temperature-specific RMSF values (`rmsf_320` through `rmsf_450`)
-- `protein_size`: Total number of residues in the protein
-- `normalized_resid`: Position in the sequence (normalized 0-1)
-- `core_exterior`: Whether the residue is buried (`core`) or exposed (`exterior`)
-- `relative_accessibility`: Relative solvent accessibility (0-1 scale)
-- `dssp`: Secondary structure assignment (H=helix, E=sheet, C=coil, etc.)
-- `phi_norm` & `psi_norm`: Normalized backbone torsion angles
-- Encoded versions of categorical features for ML compatibility
+<table>
+<tr><th colspan="2" style="text-align:left; background-color:#f0fff7; padding:10px;">
+<b>Feature Descriptions</b>
+</th></tr>
+<tr>
+<th style="width:30%;">Feature</th>
+<th style="width:70%;">Description</th>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td><code>rmsf_320</code> - <code>rmsf_450</code></td>
+<td>Temperature-specific RMSF values at different temperatures (K)</td>
+</tr>
+<tr>
+<td><code>protein_size</code></td>
+<td>Total number of residues in the protein</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td><code>normalized_resid</code></td>
+<td>Position in the sequence (normalized 0-1)</td>
+</tr>
+<tr>
+<td><code>core_exterior</code></td>
+<td>Whether the residue is buried (core) or exposed (exterior)</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td><code>relative_accessibility</code></td>
+<td>Relative solvent accessibility (0-1 scale)</td>
+</tr>
+<tr>
+<td><code>dssp</code></td>
+<td>Secondary structure assignment (H=helix, E=sheet, C=coil, etc.)</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td><code>*_encoded</code> columns</td>
+<td>Numerical encodings of categorical features for ML compatibility</td>
+</tr>
+<tr>
+<td><code>phi_norm</code> & <code>psi_norm</code></td>
+<td>Normalized backbone torsion angles</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td><code>rmsf_average</code></td>
+<td>Average RMSF across all temperatures</td>
+</tr>
+</table>
 
 ### 3. PDB Files and Frames
 
-**Cleaned PDB File: `outputs/pdbs/12asA00.pdb`**
-
-```
+<table>
+<tr><th colspan="2" style="text-align:left; background-color:#fff7f0; padding:10px;">
+<b>Cleaned PDB File:</b> <code>outputs/pdbs/12asA00.pdb</code>
+</th></tr>
+<tr>
+<td style="font-family:monospace; white-space:pre; background-color:#f8f9fa; padding:10px; font-size:0.9em;">
 CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
 ATOM      1  N   MET A   1      -9.152  25.423   4.759  1.00  0.00           N  
 ATOM      2  CA  MET A   1      -9.446  24.674   3.532  1.00  0.00           C  
@@ -433,36 +594,82 @@ ATOM      3  C   MET A   1      -8.188  24.560   2.681  1.00  0.00           C
 ATOM      4  O   MET A   1      -7.506  25.552   2.424  1.00  0.00           O  
 ATOM      5  CB  MET A   1     -10.523  25.351   2.701  1.00  0.00           C  
 ...
-```
+</td>
+</tr>
+</table>
 
-**Frame File: `outputs/frames/replica_0/320/12asA00_frame_0.pdb`**
-
-```
+<table>
+<tr><th colspan="2" style="text-align:left; background-color:#fff7f0; padding:10px;">
+<b>Frame File:</b> <code>outputs/frames/replica_0/320/12asA00_frame_0.pdb</code>
+</th></tr>
+<tr>
+<td style="font-family:monospace; white-space:pre; background-color:#f8f9fa; padding:10px; font-size:0.9em;">
 CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
 ATOM      1  N   MET A   1      91.234  45.677  59.421  1.00  0.00           N  
 ATOM      2  CA  MET A   1      91.786  44.892  58.342  1.00  0.00           C  
 ATOM      3  C   MET A   1      90.841  44.732  57.188  1.00  0.00           C  
 ...
-```
+</td>
+</tr>
+</table>
 
-These files represent:
-- Cleaned, standardized PDB structures with corrected formatting
-- Representative frames extracted from the molecular dynamics trajectories using advanced clustering methods
+<table>
+<tr><th colspan="2" style="text-align:left; background-color:#fff7f0; padding:10px;">
+<b>PDB Output Description</b>
+</th></tr>
+<tr>
+<th style="width:30%;">File Type</th>
+<th style="width:70%;">Description</th>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td>Cleaned PDB</td>
+<td>Standardized protein structure with corrected formatting, atom numbering, and chain identifiers</td>
+</tr>
+<tr>
+<td>Frame Files</td>
+<td>Representative conformations extracted from MD trajectories using advanced clustering methods</td>
+</tr>
+</table>
 
 ### 4. Core/Exterior Classification Results
 
-**Integrated into feature dataset with per-residue classification:**
+<table>
+<tr><th colspan="4" style="text-align:left; background-color:#f7f0ff; padding:10px;">
+<b>Integrated Feature Dataset with Per-Residue Classification</b>
+</th></tr>
+<tr style="background-color:#f8f9fa;">
+<th>domain_id</th>
+<th>resid</th>
+<th>core_exterior</th>
+<th>relative_accessibility</th>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>1</td>
+<td><span style="color:#2980b9;"><b>exterior</b></span></td>
+<td>0.85</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td>12asA00</td>
+<td>2</td>
+<td><span style="color:#2980b9;"><b>exterior</b></span></td>
+<td>0.63</td>
+</tr>
+<tr>
+<td>12asA00</td>
+<td>3</td>
+<td><span style="color:#c0392b;"><b>core</b></span></td>
+<td>0.15</td>
+</tr>
+<tr style="background-color:#f8f9fa;">
+<td>12asA00</td>
+<td>4</td>
+<td><span style="color:#c0392b;"><b>core</b></span></td>
+<td>0.08</td>
+</tr>
+</table>
 
-```csv
-domain_id,resid,core_exterior,relative_accessibility
-12asA00,1,exterior,0.85
-12asA00,2,exterior,0.63
-12asA00,3,core,0.15
-12asA00,4,core,0.08
-...
-```
-
-This data classifies each residue as either "core" (buried inside the protein) or "exterior" (exposed to solvent) based on its relative accessibility value.
+This data classifies each residue as either "core" (buried inside the protein) or "exterior" (exposed to solvent) based on its relative accessibility value. This classification is critical for understanding the relationship between residue location and flexibility.
 
 ### 5. Visualizations
 
