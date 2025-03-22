@@ -153,7 +153,7 @@ graph TD
     TempAvg --> ML[ML‑Ready Dataset]
 
     %% Coordinate pipeline
-    Clean --> Vox[Voxelization]
+    Frames --> Vox[Voxelization]
     Vox --> ML
 
     %% Feature generation
