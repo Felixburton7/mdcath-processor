@@ -139,13 +139,14 @@ graph TD
 
     B --> PDB[PDB Processing]
     B --> RMSF[RMSF Processing]
-    B --> COORD[Coordinate Processing]
+    
 
     %% PDB pipeline
     PDB --> Clean[PDB Cleaning]
     Clean --> Classify[Core/Exterior Classification]
     Clean --> Frames[Frame Extraction]
     Clean --> DSSP[DSSP Processing]
+    Clean --> COORD[Coordinate Processing]
 
     %% RMSF pipeline
     RMSF --> Replica[RMSF Analysis]
