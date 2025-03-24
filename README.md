@@ -173,9 +173,9 @@ graph TD
     
     C1 --> D1[PDB Processing]
     D1 --> E1[Cleaned PDB Files]
-    E1 --> F1[Core/Exterior Classification]
     E1 --> C4[Coordinate Data]
     E1 --> D3[DSSP Processing]
+    D3 --> F1[Core/Exterior Classification]
     
     C2 --> D2[RMSF Analysis]
     D2 --> E2[Replica-level RMSF]
@@ -183,10 +183,9 @@ graph TD
     
     C4 --> F2[Frame Extraction]
     
-    F1 --> G[Feature Generation]
+    F1 --> G[Machine Learning Features]
     F2 --> H[Voxelization]
     F3 --> G
-    D3 --> G
     
     H --> G
     G --> I[ML-Ready Datasets]
